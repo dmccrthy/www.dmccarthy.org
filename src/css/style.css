@@ -1,3 +1,5 @@
+/* General Styling + Index Page */
+
 * {
    margin: 0; 
    text-decoration: none;
@@ -9,10 +11,49 @@ body {
     color: #031926;
 }
 
+/* sfhdhf */
+
 h1 {
     color: white;
-    font-size: 6em;
-    text-shadow: 6px 6px #031926; 
+    font-size: 8em;
+    text-shadow: 6px 6px #031926;
+    border-right: .09em solid white;
+    overflow: hidden;
+    width: 0;
+    max-width: max-content;
+}
+
+#header-top {
+    animation: 
+    typing 2s steps(20, end) forwards;
+}
+
+#header-end {
+    border-color: transparent;
+    
+    animation: 
+    typing 2s steps(20, end) 1s forwards,
+    blinking .8s infinite 1s; 
+}
+
+@keyframes typing {
+    from { width: 0;}
+    to { width: 100%; border-color: transparent; padding-right: 1vw;}
+}
+
+@keyframes blinking {
+    from { border-color:  transparent;}
+    to { border-color: white;}
+}
+
+/* fdfd */
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1em;
 }
 
 footer {
@@ -40,6 +81,7 @@ footer {
 
 .nav-button {
     color: white;
+    font-size: 1.5em;
     font-weight: 900;
     text-shadow: .5px 1px #031926;
     transition: 2s;
@@ -55,26 +97,30 @@ footer {
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    text-align: initial;
+    overflow-y: hidden;
 }
 
 .header-text {
-    margin-left: -30%;
-    margin-bottom: 9%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25%;
 }
 
 .header-arrow {
-    scale: .4;
+    position: absolute;
+    bottom: 3vw;
+    left: 45vw;
+    width: 10vw;
+    height: 10vh;
     cursor: pointer;
     transition: 1s;
 }
 
 .header-arrow:hover {
-    scale: .5;
+    bottom: 1vw;
 }
 
 .body-row {
@@ -92,15 +138,28 @@ footer {
     background-color: #FBF8EE;
     min-width: 40vw;
     padding: 1%;
+    display: flex;
+    flex-direction: column;
 }
 
-.link-wid {
+.link-row {
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    padding: 0;
+    align-items: center;
+    margin: 1%;
+    font-size: 2em;
 }
 
 .link-img {
-    scale: .1;
+    width: 2vw;
+    height: 2vw;
 }
+
+.footer-link {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Resume Styling */
+
+/* Project Styling */
