@@ -1,0 +1,23 @@
+{
+  "name": "dmccrthy.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "dmccrthy.github.io",
+  "author": "Dan McCarthy",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.19.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^6.1.1"
+  }
+}
