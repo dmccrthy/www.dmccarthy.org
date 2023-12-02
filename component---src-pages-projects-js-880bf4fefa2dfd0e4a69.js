@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdmccrthy_github_io=self.webpackChunkdmccrthy_github_io||[]).push([[853],{7219:function(e,t,c){c.r(t),c.d(t,{Head:function(){return u}});var n=c(7294);t.default=()=>n.createElement("h1",null,"hi");const u=()=>n.createElement("title",null,"Projects")}}]);
-//# sourceMappingURL=component---src-pages-projects-js-880bf4fefa2dfd0e4a69.js.map
