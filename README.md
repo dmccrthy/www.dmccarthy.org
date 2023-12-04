@@ -1,38 +1,76 @@
-<h1 align="center">
-  Hi, I'm Dan
-</h1>
 
-## 🚀 Quick start
+<div style="display: flex; align-items: flex-end; justify-content: center;">
+    <img src="src/img/logo2.png" style="max-width: 90px" />
+    <h1>
+    Dan McCarthy
+    </h1>
+</div>
 
-1.  **Create a Gatsby site.**
+## 📝 License
+This Website is provided under the MIT license. Feel free to use it as a template for your own proejects, though credit would be appreciated.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## 🏁 Getting Started
+
+1.  **Clone the Repo**
+
+    Start by cloning the repository to your device
 
     ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
+    git clone https://github.com/dmccrthy/dmccrthy.github.io
     ```
 
-2.  **Start developing.**
+2.  **Install Dependencies**
 
-    Navigate into your new site’s directory and start it up.
+    From here you should navigate to the site folder and install the dependencies
 
     ```shell
-    cd my-gatsby-site/
+    cd dmccrthy.github.io/
+    npm install
+    ```
+
+3.  **Run the Website**
+
+    ```shell
     npm run develop
+    #Alternatively: "gatsby develop"
     ```
 
-3.  **Open the code and start customizing!**
+    From here the site should be running at http://localhost:8000
 
-    Your site is now running at http://localhost:8000!
+## 📁 Folder Structure
+```
+┌ src
+│ ├ components
+│ │ └  
+│ ├ img
+│ │ └   
+│ ├ pages
+│ │ └  
+│ └ images
+│   └  
+│
+├ static
+│ └ CNAME
+│
+├ gatsby-config.js
+├ package.json
+└ README.md
+```
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+## 🧰 Tools
+-   Gatsbyjs
+-   React
+-   Styled Components
 
-4.  **Learn more**
+## 📖 Learn More
+- [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+##
+Thanks for Reading
+
+-Dan

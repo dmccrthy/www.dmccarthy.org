@@ -1,23 +1,28 @@
 import styled from "styled-components";
 
+
 export const NavWrapper = styled.div`
     display: flex;
-    align-items: center;
     
-    height: 60px;
+    height: 8vh;
     width: 100vw;
 
     .logo {
-        margin-right: 10px;
+        margin-right: auto;
         cursor: pointer;
     
         img {
-          max-width: 10vw;
+          max-width: 82px;
         }
       }
 `
 
 export const  NavItems = styled.nav`
       display: flex;
-      justify-content: space-around;
+      align-items: center;
+
+      a {
+        margin-right: 3vw;
+        font-size: 1.5em;
+      }
 `

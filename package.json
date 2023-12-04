@@ -5,19 +5,28 @@
   "description": "dmccrthy.github.io",
   "author": "Dan McCarthy",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "react",
+    "Dan McCarthy"
   ],
   "scripts": {
     "develop": "gatsby develop",
+    "deploy": "gatsby build && gh-pages -d public -b develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^4.19.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "gatsby": "^5.0.0",
+    "gatsby-plugin-robots-txt": "^1.8.0",
+    "gatsby-plugin-sitemap": "^6.12.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "styled-components": "^6.1.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
   }
 }

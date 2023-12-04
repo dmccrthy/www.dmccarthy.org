@@ -3,8 +3,26 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `dmccrthy`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `dmccarthy`,
+    siteUrl: `https://www.dmccarthy.org`,
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+    }
+
+  ],
 }
