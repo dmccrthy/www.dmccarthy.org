@@ -1,10 +1,16 @@
-
-<div style="display: flex; align-items: flex-end; justify-content: center;">
-    <img src="src/img/logo2.png" style="max-width: 90px" />
-    <h1>
-    Dan McCarthy
-    </h1>
-</div>
+<table class="border" align="center">
+    <tr>
+        <th>
+            <img src="src/img/logo2.png" height="100"/>           
+        </th>
+        <th>
+            <h1>
+                Dan McCarthy
+            </h1>
+        </th>
+    </tr>
+    
+</table>
 
 ## 📝 License
 This Website is provided under the MIT license. Feel free to use it as a template for your own proejects, though credit would be appreciated.
