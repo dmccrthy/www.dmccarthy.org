@@ -18,9 +18,13 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/karla": "^5.0.18",
+    "@fontsource/montserrat": "^5.0.16",
     "gatsby": "^5.0.0",
+    "gatsby-plugin-fix-fouc": "^1.0.5",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sitemap": "^6.12.3",
+    "gatsby-plugin-styled-components": "^6.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

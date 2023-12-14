@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "/src/img/logo2.png"
+import logo from "/src/img/footer.png"
 import { FooterWrap, FooterItems } from "./Footer.style";
 
 const Footer = () => {

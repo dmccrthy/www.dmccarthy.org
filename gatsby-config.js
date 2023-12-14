@@ -1,6 +1,7 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
 module.exports = {
   siteMetadata: {
     title: `dmccarthy`,
@@ -22,7 +23,8 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-sitemap',
-    }
-
+    },
+    `gatsby-plugin-fix-fouc`,
+    `gatsby-plugin-styled-components`,
   ],
 }

@@ -1,5 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
+import "@fontsource/montserrat";
+import "@fontsource/karla";
+
 const GlobalStyle = createGlobalStyle`
 
   * {
@@ -9,11 +12,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat"
+    font-family: "Montserrat";
   }
 
   p {
-    font-family: "Karla"
+    font-family: "Karla";
   }
 
   a {

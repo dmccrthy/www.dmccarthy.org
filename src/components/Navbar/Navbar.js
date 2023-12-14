@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from '/src/img/logo1.png';
+import logo from '/src/img/logo.png';
 import { NavWrapper, NavItems } from "./Navbar.style";
 
 
@@ -13,17 +13,17 @@ const Navbar = () => {
             <NavItems>
                 <Link to="/">
                     <h1>
-                        Home
+                        Home |
                     </h1>
                 </Link>
                 <Link to="/resume">
                     <h1>
-                        Resume
+                        Resume |
                     </h1>
                 </Link>
                 <Link to="/projects">
                     <h1>
-                        Projects
+                        Projects |
                     </h1>
                 </Link>
             </NavItems>

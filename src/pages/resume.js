@@ -2,16 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 import GlobalStyle from "../styles/GlobalStyle"
-import DefaultHead from "../components/Head"
+import DefaultHead from "../components/SEO"
 import Navbar from "../components/Navbar/Navbar"
 import Footer from "../components/Footer/Footer"
-
-const ContentWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 84vh;
-`
+import { ContentWrapper } from "../components/ContentWrapper"
 
 const ResumePage = () => {
     return (
