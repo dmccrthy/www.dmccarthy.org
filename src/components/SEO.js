@@ -1,16 +1,17 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import ico from "../img/favicon.ico"
+import favicon from "../img/favicon.png"
 
 const DefaultHead = ({title}) => {
     return (
         <Helmet>
             <title>{title}</title>
+            
             <meta name="description" content="Dan McCarthy - Student and Developer"/>
-            <meta name="keywords" content="Dan McCarthy, dmccarthy, mccarthy, Development, Porfolio" />
+            <meta name="keywords" content="Dan McCarthy, dmccarthy, McCarthy, Development, Porfolio, Daniel McCarthy, dmccarthy.org" />
             <meta name="url" content="https://www.dmccarthy.org" />
             <link rel="canonical" href="https://www.dmccarthy.org" />
-            <link id="icon" rel="icon" href={ico} />
+            <link id="icon" rel="icon" href={favicon} />
 
             {/* Font Import */}
             {/* <link rel="preconnect" href="https://fonts.googleapis.com" />

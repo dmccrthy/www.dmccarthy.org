@@ -1,28 +1,26 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from '/src/img/logo.png';
+import { GradientBar } from "../GradientBar";
 import { NavWrapper, NavItems } from "./Navbar.style";
 
 
 const Navbar = () => {
     return (
         <NavWrapper>
-            <Link className="logo" to="/">
-                <img className="logo" src={logo} alt="" />
-            </Link>
+            <GradientBar />
             <NavItems>
                 <Link to="/">
-                    <h1>
+                    <h1 className="orange">
                         Home |
                     </h1>
                 </Link>
                 <Link to="/resume">
-                    <h1>
+                    <h1 className="red">
                         Resume |
                     </h1>
                 </Link>
                 <Link to="/projects">
-                    <h1>
+                    <h1 className="purple">
                         Projects |
                     </h1>
                 </Link>

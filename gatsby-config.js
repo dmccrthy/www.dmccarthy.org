@@ -22,6 +22,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Dan McCarthy - About Me`,
+        short_name: `Dan McCarthy`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: 'src/img/favicon.png',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-sitemap',
     },
     `gatsby-plugin-fix-fouc`,

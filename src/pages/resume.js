@@ -7,15 +7,26 @@ import Navbar from "../components/Navbar/Navbar"
 import Footer from "../components/Footer/Footer"
 import { ContentWrapper } from "../components/ContentWrapper"
 
+const TempContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    background-color: #191919;
+`
+
 const ResumePage = () => {
     return (
         <main>
             <GlobalStyle />
             <Navbar />
             <ContentWrapper>
-                <h1>
-                    Under Construction...  
-                </h1>
+                <TempContainer>
+                    <h1>
+                        Under Construction...  
+                    </h1>
+                </TempContainer>
             </ContentWrapper>
             <Footer />
         </main>

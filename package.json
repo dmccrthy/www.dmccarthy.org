@@ -22,6 +22,7 @@
     "@fontsource/montserrat": "^5.0.16",
     "gatsby": "^5.0.0",
     "gatsby-plugin-fix-fouc": "^1.0.5",
+    "gatsby-plugin-manifest": "^5.13.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sitemap": "^6.12.3",
     "gatsby-plugin-styled-components": "^6.12.0",

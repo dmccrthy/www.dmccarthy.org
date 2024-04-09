@@ -8,19 +8,26 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     margin: 0;
+
+    color-scheme: dark;
+  }
+
+  html {
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat";
+    font-family: "Montserrat", Arial;
+    color: #ffffff;
   }
 
   p {
-    font-family: "Karla";
+    font-family: "Karla", Arial;
+    color: #ffffff;
   }
 
   a {
-    color: black
+    color: white
   }
 `
 
