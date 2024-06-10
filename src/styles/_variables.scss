@@ -1,0 +1,22 @@
+/*
+* Sass variables used throughout .scss files
+*/
+
+// Colors
+$bg-main: #191919;
+$bg-alt: #111111;
+$bg-accent: #303030;
+
+// Gradient Vars
+$gradient: linear-gradient(
+  103deg,
+  rgba(255, 147, 0, 1) 0%,
+  rgba(243, 34, 89, 1) 40%,
+  rgba(205, 75, 208, 1) 59%,
+  rgba(132, 47, 167, 1) 74%
+);
+
+// Breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;

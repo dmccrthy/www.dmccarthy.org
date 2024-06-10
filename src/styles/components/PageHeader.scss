@@ -1,0 +1,103 @@
+@use "@styles/variables" as var;
+
+.page-header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("@img/background.jpg");
+  background-size: cover;
+  overflow: hidden;
+
+  height: 100vh;
+  width: 100vw;
+  padding: 1vw;
+
+  h1 {
+    font-size: calc(2em + 4vw);
+    font-weight: bold;
+    margin-bottom: 1vh;
+  }
+
+  p {
+    font-size: calc(1em + 1vw);
+    margin-top: 5vh;
+  }
+
+  hr {
+    max-height: 15px;
+    height: 1vw;
+    width: 50vw;
+    background: var.$gradient;
+    border: 0;
+  }
+
+  h1,
+  p,
+  hr {
+    margin-left: 0vw;
+    animation: slide 0.5s forwards;
+  }
+
+  // Animations
+  @keyframes slide {
+    50% {
+      margin-left: 0.3vw;
+    }
+    100% {
+      margin-left: 1vw;
+    }
+  }
+
+  // Media Queries
+  @media screen and (max-width: 992px) {
+    hr {
+      width: 60vw;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    hr {
+      width: 75vw;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    hr {
+      width: 90vw;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  margin-left: 0vw;
+  animation: slide 0.5s forwards;
+
+  a {
+    margin: 0.5vw;
+    padding: 0.5vw;
+  }
+
+  img {
+    max-width: 2vw;
+    min-width: 20px;
+    filter: invert(100%) sepia(0%) saturate(7441%) hue-rotate(152deg)
+      brightness(114%) contrast(103%);
+    transition: 0.5s, filter 0s;
+  }
+
+  img:hover {
+    transform: scale(1.05);
+  }
+
+  .linkedin:hover {
+    filter: invert(51%) sepia(38%) saturate(1745%) hue-rotate(3deg)
+      brightness(110%) contrast(102%);
+  }
+
+  .git:hover {
+    filter: invert(18%) sepia(93%) saturate(2131%) hue-rotate(270deg)
+      brightness(95%) contrast(89%);
+  }
+}

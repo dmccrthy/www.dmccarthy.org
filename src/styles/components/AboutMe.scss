@@ -1,0 +1,90 @@
+@use "@styles/variables" as var;
+
+.about-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 75vh;
+  z-index: -3;
+  overflow: hidden;
+  background-color: var.$bg-alt;
+
+  h1,
+  h2 {
+    margin: 2vw;
+  }
+
+  p {
+    margin-left: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  @media screen and (max-width: var.$sm) {
+    height: 95vh;
+  }
+}
+
+.about {
+  display: flex;
+
+  background-color: var.$bg-main;
+  border-radius: 1vw;
+  box-shadow: var.$bg-accent 1vw 1vw;
+  height: 50vh;
+  width: 90vw;
+  padding: 1vw;
+
+  @media screen and (max-width: var.$sm) {
+    height: 70vh;
+  }
+}
+
+.about-text {
+  width: 45vw;
+  overflow: hidden;
+
+  p {
+    font-size: 2em;
+  }
+
+  @media screen and (max-width: var.$lg) {
+    p {
+      font-size: 1.4em;
+    }
+  }
+
+  @media screen and (max-width: var.$md) {
+    width: 85vw;
+
+    h1 {
+      font-size: 1.75em;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  overflow: hidden;
+
+  img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10%;
+    border: 5px solid #f8f8f8;
+    overflow: hidden;
+    margin: 0;
+    background-color: #f8f8f8;
+  }
+
+  @media screen and (max-width: var.$md) {
+    display: none;
+  }
+}

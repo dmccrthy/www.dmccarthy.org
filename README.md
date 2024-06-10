@@ -13,6 +13,7 @@
 </table>
 
 ## 📝 License
+
 This Website is provided under the MIT license. Feel free to use it as a template for your own projects, just give credit.
 
 ## 🏁 Getting Started
@@ -43,33 +44,39 @@ This Website is provided under the MIT license. Feel free to use it as a templat
 
     From here the site should be running at http://localhost:8000
 
-## 📁 Folder Structure
+## 📁 What's inside?
+
 ```
 ┌ src
 │ ├ components
-│ │ └ ...
+│ │ └ Self Explanatory : |
 │ ├ img
-│ │ └ ...
+│ │ └ Site image/icons
 │ ├ pages
-│ │ └ ...
-│ └ images
-│   └ ...
+│ │ └ All of the main webpages
+│ ├ styles
+│ │ └ Sass stylesheets
+│ └ templates
+│   └
 │
 ├ static
 │ └ CNAME
 │
 ├ gatsby-config.js
 ├ gatsby-browser.js
+├ gatsby-node.js
 ├ package.json
 └ README.md
 ```
 
 ## 🧰 Tools Used
+
 - [Gatsbyjs](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 - [React](https://react.dev/reference/react)
-- [Styled-Components](https://styled-components.com/docs)
+- [Sass]()
 
 ##
+
 Thanks for Reading
 
 -Dan

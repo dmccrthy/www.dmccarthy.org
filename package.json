@@ -1,8 +1,8 @@
 {
-  "name": "dmccrthy.github.io",
+  "name": "www.dmccarthy.org",
   "version": "1.0.0",
   "private": true,
-  "description": "dmccrthy.github.io",
+  "description": "React porfolio site",
   "author": "Dan McCarthy",
   "keywords": [
     "gatsby",
@@ -24,11 +24,15 @@
     "gatsby-plugin-fix-fouc": "^1.0.5",
     "gatsby-plugin-manifest": "^5.13.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
+    "gatsby-plugin-sass": "^6.13.1",
     "gatsby-plugin-sitemap": "^6.12.3",
     "gatsby-plugin-styled-components": "^6.12.0",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-remark": "^6.13.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "sass": "^1.77.4",
     "styled-components": "^6.1.1"
   },
   "devDependencies": {

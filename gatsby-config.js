@@ -9,14 +9,25 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {},
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
       options: {
         env: {
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
+            policy: [{ userAgent: "*", disallow: ["/"] }],
           },
           production: {
-            policy: [{ userAgent: '*', allow: '/' }],
+            policy: [{ userAgent: "*", allow: "/" }],
           },
         },
       },
@@ -30,13 +41,14 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: 'src/img/favicon.png',
+        icon: "src/img/favicon.png",
       },
     },
     {
-      resolve: 'gatsby-plugin-sitemap',
+      resolve: "gatsby-plugin-sitemap",
     },
     `gatsby-plugin-fix-fouc`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sass`,
   ],
-}
+};
