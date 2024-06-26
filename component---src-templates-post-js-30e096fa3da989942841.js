@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkwww_dmccarthy_org=self.webpackChunkwww_dmccarthy_org||[]).push([[851],{2396:function(e,t,l){l.r(t);var n=l(7294),a=l(8161),r=l(686),c=l(9383);t.default=e=>{let{data:t,pageContext:l}=e;return n.createElement(n.Fragment,null,n.createElement(c.Z,{title:l.title+" | Dan McCarthy",slug:`/${l.slug}/`}),n.createElement(a.Z,null),n.createElement("h1",null,l.title),n.createElement("p",null,l.content),n.createElement(r.Z,null))}}}]);
+//# sourceMappingURL=component---src-templates-post-js-30e096fa3da989942841.js.map
