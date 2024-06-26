@@ -3,18 +3,17 @@
 .page-header {
   display: flex;
   position: relative;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url("@img/background.jpg");
+  align-items: center;
+  background-color: var.$bg-main;
+  background-image: url("@img/backing.png");
   background-size: cover;
   overflow: hidden;
 
   height: 100vh;
   width: 100vw;
-  padding: 1vw;
 
   h1 {
-    font-size: calc(2em + 4vw);
+    font-size: 6em;
     font-weight: bold;
     margin-bottom: 1vh;
   }
@@ -27,42 +26,54 @@
   hr {
     max-height: 15px;
     height: 1vw;
-    width: 50vw;
+    width: 45vw;
     background: var.$gradient;
     border: 0;
   }
 
   h1,
-  p,
-  hr {
-    margin-left: 0vw;
-    animation: slide 0.5s forwards;
-  }
-
-  // Animations
-  @keyframes slide {
-    50% {
-      margin-left: 0.3vw;
-    }
-    100% {
-      margin-left: 1vw;
-    }
+  p {
+    text-shadow: 2px 2px var.$bg-main;
   }
 
   // Media Queries
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: var.$xl) {
+    h1 {
+      font-size: 5em;
+    }
+
     hr {
-      width: 60vw;
+      width: 55vw;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: var.$lg) {
+    h1 {
+      font-size: 3.7em;
+    }
+
+    hr {
+      width: 50vw;
+    }
+  }
+
+  @media screen and (max-width: var.$md) {
+    h1 {
+      font-size: 4em;
+    }
+
     hr {
       width: 75vw;
     }
+
+    justify-content: center;
   }
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: var.$sm) {
+    h1 {
+      font-size: 3em;
+    }
+
     hr {
       width: 90vw;
     }
@@ -71,8 +82,6 @@
 
 .socials {
   display: flex;
-  margin-left: 0vw;
-  animation: slide 0.5s forwards;
 
   a {
     margin: 0.5vw;
@@ -92,12 +101,36 @@
   }
 
   .linkedin:hover {
-    filter: invert(51%) sepia(38%) saturate(1745%) hue-rotate(3deg)
-      brightness(110%) contrast(102%);
+    filter: invert(30%) sepia(17%) saturate(1371%) hue-rotate(112deg)
+      brightness(97%) contrast(84%);
   }
 
   .git:hover {
-    filter: invert(18%) sepia(93%) saturate(2131%) hue-rotate(270deg)
-      brightness(95%) contrast(89%);
+    filter: invert(21%) sepia(85%) saturate(1519%) hue-rotate(202deg)
+      brightness(101%) contrast(99%);
   }
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 5vw 0 7vw;
+
+  @media screen and (max-width: var.$md) {
+    margin: 0;
+  }
+}
+
+.photo-container {
+  @media screen and (max-width: var.$md) {
+    display: none;
+  }
+}
+
+.headshot {
+  width: 30vw;
+  height: 30vw;
+  border: 5px solid #f8f8f8;
+  border-radius: 10%;
 }

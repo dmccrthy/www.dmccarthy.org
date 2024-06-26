@@ -1,0 +1,35 @@
+@use "@styles/variables" as var;
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var.$bg-main;
+  min-height: 100vh;
+}
+
+.resume-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin: 50px;
+  }
+}
+
+.resume-item {
+  display: flex;
+
+  background-color: var.$bg-alt;
+  border-radius: 1vw;
+  padding: 1vw;
+  width: 90vw;
+
+  .item-img {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .item-text {
+  }
+}

@@ -1,7 +1,11 @@
+// Packages
 import React from "react";
-import logo from "@img/footer.png";
 
+// Styles
 import "@styles/components/Footer.scss";
+
+// Images
+import logo from "@img/footer.png";
 
 const Footer = () => {
   return (

@@ -12,16 +12,20 @@
 
   h1,
   h2 {
-    margin: 2vw;
+    margin: 20px;
   }
 
   p {
-    margin-left: 2vw;
-    margin-bottom: 2vw;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: var.$md) {
+    height: 80vh;
   }
 
   @media screen and (max-width: var.$sm) {
-    height: 95vh;
+    height: 100vh;
   }
 }
 
@@ -32,11 +36,20 @@
   border-radius: 1vw;
   box-shadow: var.$bg-accent 1vw 1vw;
   height: 50vh;
-  width: 90vw;
+  width: 75vw;
   padding: 1vw;
 
+  @media screen and (max-width: var.$md) {
+    height: 65vh;
+
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
   @media screen and (max-width: var.$sm) {
-    height: 70vh;
+    height: 75vh;
+    width: 90vw;
   }
 }
 
@@ -44,25 +57,25 @@
   width: 45vw;
   overflow: hidden;
 
-  p {
-    font-size: 2em;
+  h1 {
+    font-size: 1.75em;
   }
 
-  @media screen and (max-width: var.$lg) {
-    p {
-      font-size: 1.4em;
-    }
+  p {
+    font-size: 1.3em;
   }
 
   @media screen and (max-width: var.$md) {
-    width: 85vw;
-
-    h1 {
-      font-size: 1.75em;
-    }
+    width: 70vw;
 
     p {
-      font-size: 1.5em;
+      font-size: 1em;
+    }
+  }
+
+  @media screen and (max-width: var.$sm) {
+    h1 {
+      font-size: 1.3em;
     }
   }
 }
@@ -75,8 +88,8 @@
   overflow: hidden;
 
   img {
-    width: 20vw;
-    height: 20vw;
+    width: 22vw;
+    height: 22vw;
     border-radius: 10%;
     border: 5px solid #f8f8f8;
     overflow: hidden;
@@ -85,6 +98,21 @@
   }
 
   @media screen and (max-width: var.$md) {
-    display: none;
+    height: 33vw;
+    width: 75vw;
+
+    img {
+      width: 33vw;
+      height: 33vw;
+    }
+  }
+
+  @media screen and (max-width: var.$sm) {
+    height: 45vw;
+
+    img {
+      width: 45vw;
+      height: 45vw;
+    }
   }
 }

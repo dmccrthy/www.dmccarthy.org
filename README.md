@@ -14,7 +14,7 @@
 
 ## 📝 License
 
-This Website is provided under the MIT license. Feel free to use it as a template for your own projects, just give credit.
+This Website is provided under the MIT license. Feel free to use it as inspiration for your own website.
 
 ## 🏁 Getting Started
 

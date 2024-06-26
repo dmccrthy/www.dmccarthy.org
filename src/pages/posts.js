@@ -1,12 +1,13 @@
+// Packages
 import React from "react";
 import styled from "styled-components";
-import { graphql } from "gatsby";
-
-import DefaultHead from "../components/SEO";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { Link } from "gatsby";
-import FetchMarkdown from "../hooks/graphql";
+
+// Components
+import DefaultHead from "@components/SEO";
+import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
+import FetchMarkdown from "@src/hooks/graphql";
 
 const PageContainer = styled.div`
   display: flex;
@@ -49,7 +50,7 @@ const BlogPage = () => {
   const posts = FetchMarkdown().allMarkdownRemark.edges;
 
   return (
-    <main>
+    <>
       <Navbar />
       <div>
         <PageContainer>
@@ -69,10 +70,12 @@ const BlogPage = () => {
         </PageContainer>
       </div>
       <Footer />
-    </main>
+    </>
   );
 };
 
 export default BlogPage;
 
-export const Head = () => <DefaultHead title={"Blog Posts | Dan McCarthy"} />;
+export const Head = () => (
+  <DefaultHead title={"Blog Posts | Dan McCarthy"} slug={"/posts/"} />
+);

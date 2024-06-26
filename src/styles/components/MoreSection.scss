@@ -5,11 +5,12 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  padding: 2vh;
 
   background-color: var.$bg-main;
 
   h1 {
-    margin: 2vw 0 0.5vw 0;
+    margin-top: 1vw;
   }
 
   hr {
@@ -17,6 +18,12 @@
     height: 0.5vh;
     border: 0;
     background-color: #ffffff;
+  }
+
+  @media screen and (max-width: var.$md) {
+    hr {
+      width: 25vw;
+    }
   }
 }
 
@@ -62,9 +69,10 @@
     opacity: 0.5;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: var.$md) {
     width: 80vw;
     height: 80vw;
+    margin: 0 4vw 8vw 4vw;
 
     .image {
       width: 80vw;

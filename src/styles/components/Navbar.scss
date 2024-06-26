@@ -43,24 +43,26 @@
     margin-top: 0.5vh;
   }
 
-  .orange:hover {
-    color: #ff9300;
+  .color-1:hover {
+    color: #296352;
   }
 
-  .red:hover {
-    color: #f32259;
+  .color-2:hover {
+    color: #43978d;
   }
 
-  .pink:hover {
-    color: #cd4bd0;
+  .color-3:hover {
+    color: #296da1;
   }
 
-  .purple:hover {
-    color: #842fa7;
+  .color-4:hover {
+    color: #1750ae;
   }
 
   @media screen and (max-width: var.$md) {
-    display: none;
+    flex-direction: column;
+
+    margin: 1vw 1vh 0 0;
   }
 }
 

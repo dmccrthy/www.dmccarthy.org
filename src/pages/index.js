@@ -28,4 +28,6 @@ const IndexPage = () => {
 export default IndexPage;
 
 // Header Contents
-export const Head = () => <DefaultHead title={"Dan McCarthy - About Me"} />;
+export const Head = () => (
+  <DefaultHead title={"Dan McCarthy - Student & Developer"} slug={""} />
+);

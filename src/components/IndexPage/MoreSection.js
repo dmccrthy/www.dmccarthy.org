@@ -1,20 +1,24 @@
+// Packages
 import React from "react";
 import { Link } from "gatsby";
 
-import projects from "/src/img/projects.png";
-import games from "/src/img/games.png";
-import writing from "/src/img/writing.png";
-import screen from "/src/img/icons/screen.svg";
-import gamepad from "/src/img/icons/game.svg";
-import docs from "/src/img/icons/docs.svg";
-
+// Styles
 import "@styles/components/MoreSection.scss";
+
+// Images
+import projects from "@img/projects.png";
+import games from "@img/games.png";
+import writing from "@img/writing.png";
+import screen from "@img/icons/screen.svg";
+import gamepad from "@img/icons/game.svg";
+import docs from "@img/icons/docs.svg";
 
 const MoreSection = () => {
   return (
     <>
       <div className="more-header">
         <h1>Links</h1>
+        <hr />
       </div>
       <div className="more-wrapper">
         <div className="more-box">
