@@ -1,1 +1,1 @@
-{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"Dynamic Posts with Gatsby","slug":"test-post","date":"5/14/2024","excerpt":"Test post for my website :)"}}}]}}}
+{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"Dynamic Posts with Gatsby","slug":"test-post","date":"5/14/2024","excerpt":"Testing dynamic page generation using markdown : )"}}}]}}}
