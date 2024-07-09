@@ -6,10 +6,18 @@ const AboutHeader = () => {
     <h1>
       <span>And I'm </span>
       <ReactTyped
-        strings={["a Student", "a Developer", "a Learner"]}
-        typeSpeed={25}
-        backSpeed={35}
+        strings={[
+          "a Student",
+          "a Developer",
+          "a Mentor",
+          "a Programmer",
+          "a Designer",
+          "an Artist",
+        ]}
+        typeSpeed={50}
+        backSpeed={40}
         loop
+        className="highlight"
       />
     </h1>
   );

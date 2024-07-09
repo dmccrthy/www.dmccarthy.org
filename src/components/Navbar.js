@@ -1,15 +1,28 @@
 // Packages
 import React from "react";
 import { Link } from "gatsby";
+import { useEffect } from "react";
 
 // Styles
 import "@styles/components/Navbar.scss";
 
 const Navbar = () => {
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      document.getElementById("nav").classList.add("nav-background");
+    } else {
+      document.getElementById("nav").classList.remove("nav-background");
+    }
+  };
+
   return (
     <>
-      <div className="gradient-bar" />
-      <div className="nav-wrapper">
+      <div id="nav" className="nav-wrapper">
         <nav className="nav-bar">
           <Link to="/">
             <h1 className="color-1">Home</h1>

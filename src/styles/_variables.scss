@@ -3,16 +3,28 @@
 */
 
 // Colors
-$bg-main: #191919;
-$bg-alt: #111111;
+$bg-main: #1d2021;
+$bg-alt: #161819;
 $bg-accent: #303030;
+
+$red: #cc241d;
+$green: #98971a;
+$yellow: #d79921;
+$blue: #458588;
+$blue-alt: #076678;
+
+$purple: #b16286;
+$aqua: #689d6a;
 
 // Gradient Vars
 $gradient: linear-gradient(
-  120deg,
-  rgba(41, 99, 82, 1) 19%,
-  rgba(67, 151, 141, 1) 47%,
-  rgba(23, 80, 174, 1) 74%
+  90deg,
+  $red 25%,
+  $green 25%,
+  $green 50%,
+  $yellow 50%,
+  $yellow 75%,
+  $blue 75%
 );
 
 // Breakpoints

@@ -44,6 +44,14 @@ const PostCard = styled.div`
   padding: 2vw;
   margin-bottom: 1vh;
   background-color: #111111;
+
+  a {
+    text-decoration: none;
+
+    h2 {
+      text-decoration: underline;
+    }
+  }
 `;
 
 const BlogPage = () => {
@@ -55,8 +63,7 @@ const BlogPage = () => {
       <div>
         <PageContainer>
           <PostList>
-            <h1>Posts:</h1>
-            <hr />
+            <h1 style={{ marginBottom: "10px" }}>Posts:</h1>
             {posts.map(({ node }) => (
               <PostCard>
                 <Link to={"/posts/" + node.frontmatter.slug}>

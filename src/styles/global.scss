@@ -1,3 +1,5 @@
+@use "@styles/variables" as var;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,4 +31,25 @@ p {
 
 a {
   color: #ffffff;
+}
+
+button {
+  background-color: transparent;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+// Page fade-in effect
+.fade-in-page {
+  background-color: white;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

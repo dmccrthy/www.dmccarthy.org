@@ -1,0 +1,162 @@
+@use "@styles/variables" as var;
+
+// Start at lowest breakpoint <576px
+.contact-wrapper {
+  width: 100vw;
+  background-color: var.$bg-main;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: center;
+  padding: 8vw;
+}
+
+.contact-content {
+  display: flex;
+  // Puts link above form
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  width: 90vw;
+  height: 36vh;
+
+  background-color: var.$bg-alt;
+  border-radius: 1vh;
+  padding: 5vw;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  margin: 1vw;
+
+  h3,
+  input,
+  textarea {
+    margin-bottom: 1vh;
+    width: 80vw;
+  }
+
+  .submit-button {
+    width: 50vw;
+  }
+}
+
+.account-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 3vh;
+}
+
+.link-tag {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 250px;
+  text-decoration: none;
+
+  img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 20px;
+    transition: 0.5s;
+  }
+}
+
+.link-tag:hover {
+  h1 {
+    font-size: 22px;
+  }
+
+  .link-icon {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.link-icon {
+  width: 50px;
+  height: 50px;
+  filter: invert(100%) sepia(0%) saturate(7441%) hue-rotate(152deg)
+    brightness(114%) contrast(103%);
+  transition: 0.5s;
+
+  margin: 10px;
+}
+
+// Small Breakpoint
+@media screen and (min-width: var.$sm) {
+  .contact-header {
+    display: flex;
+    justify-content: center;
+    padding: 8vw;
+  }
+
+  .form-container {
+    width: 90vw;
+    height: 40vh;
+
+    background-color: var.$bg-alt;
+    border-radius: 1vh;
+    padding: 5vw;
+  }
+}
+
+// Medium Breakpoint
+@media screen and (min-width: var.$md) {
+}
+
+// Large Breakpoint
+@media screen and (min-width: var.$lg) {
+  .contact-header {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    padding-top: 4vw;
+  }
+
+  .contact-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form-container {
+    width: 60vw;
+    height: 50vh;
+
+    background-color: var.$bg-alt;
+    border-radius: 1vh;
+    padding: 5vw;
+    margin: 5vw;
+  }
+
+  .main-form {
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+
+    h3,
+    input,
+    textarea {
+      margin-bottom: 1vh;
+      width: 50vw;
+    }
+
+    .submit-button {
+      width: 20vw;
+    }
+  }
+}
+
+// Extre Large Breakpoint
+@media screen and (min-width: var.$xl) {
+}

@@ -8,7 +8,16 @@ const ProjectPage = () => {
   return (
     <>
       <Navbar />
-      <h1>I'm Working on it...</h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "90vh",
+        }}
+      >
+        <h1>I'm Working on it...</h1>
+      </div>
       <Footer />
     </>
   );

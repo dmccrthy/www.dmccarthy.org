@@ -15,24 +15,23 @@ import docs from "@img/icons/docs.svg";
 
 const MoreSection = () => {
   return (
-    <>
+    <div className="more-wrapper">
       <div className="more-header">
         <h1>Links</h1>
-        <hr />
       </div>
-      <div className="more-wrapper">
+      <div className="more-content">
         <div className="more-box">
-          <img className="more-image" src={screen} />
+          <img className="more-icon" src={screen} />
           <h1>Projects</h1>
-          <Link className="image" to="/projects">
+          <Link className="more-image" to="/projects">
             <img src={projects} />
           </Link>
         </div>
         <div className="more-box">
-          <img className="more-image" src={gamepad} />
+          <img className="more-icon" src={gamepad} />
           <h1>Games</h1>
           <a
-            className="image"
+            className="more-image"
             target="_blank"
             rel="noreferrer"
             href="https://danmc.itch.io/"
@@ -41,14 +40,14 @@ const MoreSection = () => {
           </a>
         </div>
         <div className="more-box">
-          <img className="more-image" src={docs} />
+          <img className="more-icon" src={docs} />
           <h1>Blog</h1>
-          <Link className="image" to="/posts">
+          <Link className="more-image" to="/posts">
             <img src={writing} />
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

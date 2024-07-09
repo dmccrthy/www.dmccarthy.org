@@ -18,6 +18,7 @@ const ResumePage = () => {
     <>
       <Navbar />
       <div className="page-container">
+        {/* <h1>My Resume</h1> */}
         <div className="resume-section">
           <h1>Education:</h1>
           <ResumeItem

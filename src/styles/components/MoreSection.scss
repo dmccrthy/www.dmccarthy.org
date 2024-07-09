@@ -1,41 +1,27 @@
 @use "@styles/variables" as var;
 
+// Start at lowest breakpoint <576px
+.more-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var.$bg-main;
+  width: 100vw;
+}
+
 .more-header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 100vw;
-  padding: 2vh;
-
-  background-color: var.$bg-main;
-
-  h1 {
-    margin-top: 1vw;
-  }
-
-  hr {
-    width: 10vw;
-    height: 0.5vh;
-    border: 0;
-    background-color: #ffffff;
-  }
-
-  @media screen and (max-width: var.$md) {
-    hr {
-      width: 25vw;
-    }
-  }
+  margin: 2vw;
 }
 
-.more-wrapper {
+.more-content {
   display: flex;
-  justify-content: space-evenly;
-  background-color: var.$bg-main;
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .more-box {
@@ -43,47 +29,68 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25vw;
-  height: 25vw;
+
+  width: 80vw;
+  height: 80vw;
+  margin: 4vw;
   background-color: var.$bg-alt;
   border-radius: 1vw;
   box-shadow: var.$bg-accent 1vh 1vh;
-  margin: 0 2vw 4vw 2vw;
-  overflow: hidden;
-
-  .image {
-    position: absolute;
-    width: 25vw;
-    height: 25vw;
-    opacity: 0.2;
-    transition: 0.5s;
-
-    img {
-      height: 100%;
-      width: 100%;
-      border-radius: 1vw;
-    }
-  }
-
-  .image:hover {
-    opacity: 0.5;
-  }
-
-  @media screen and (max-width: var.$md) {
-    width: 80vw;
-    height: 80vw;
-    margin: 0 4vw 8vw 4vw;
-
-    .image {
-      width: 80vw;
-      height: 80vw;
-    }
-  }
 }
 
-.more-image {
+.more-icon {
   filter: invert(100%) sepia(100%) saturate(38%) hue-rotate(321deg)
     brightness(110%) contrast(110%);
   width: 8vw;
   height: 8vw;
+}
+
+.more-image {
+  position: absolute;
+  width: 80vw;
+  height: 80vw;
+  opacity: 0.2;
+  transition: 0.5s;
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 1vw;
+  }
+}
+
+.more-image:hover {
+  opacity: 0.5;
+}
+
+// Small Breakpoint
+@media screen and (min-width: var.$sm) {
+  .more-box {
+    width: 60vw;
+    height: 60vw;
+    margin: 4vw;
+  }
+
+  .more-image {
+    width: 60vw;
+    height: 60vw;
+  }
+}
+
+// Medium Breakpoint
+@media screen and (min-width: var.$md) {
+  .more-content {
+    flex-direction: row;
+  }
+
+  .more-box {
+    width: 25vw;
+    height: 25vw;
+    margin: 2vw;
+  }
+
+  .more-image {
+    width: 25vw;
+    height: 25vw;
+  }
 }

@@ -6,12 +6,13 @@
 
   width: 100vw;
 
-  background-color: #111111;
+  background-color: var.$bg-alt;
   color: #ffffff;
 }
 
 .footer-item {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 5vw;
   min-height: 75px;
@@ -34,21 +35,14 @@
   }
 
   img {
+    display: none;
     margin-right: auto;
     margin-left: 2vw;
 
     max-width: 4vw;
     min-width: 50px;
-    filter: invert(0%) sepia(9%) saturate(25%) hue-rotate(331deg)
-      brightness(89%) contrast(81%);
-  }
-
-  @media screen and (max-width: var.$sm) {
-    justify-content: center;
-
-    img {
-      display: none;
-    }
+    filter: invert(7%) sepia(6%) saturate(1023%) hue-rotate(149deg)
+      brightness(103%) contrast(87%);
   }
 }
 
@@ -58,4 +52,14 @@
   z-index: 2;
 
   background: var.$gradient;
+}
+
+@media screen and (min-width: var.$sm) {
+  .footer-item {
+    justify-content: start;
+
+    img {
+      display: inline;
+    }
+  }
 }

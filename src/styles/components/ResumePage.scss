@@ -19,6 +19,7 @@
 
 .resume-item {
   display: flex;
+  flex-direction: column;
 
   background-color: var.$bg-alt;
   border-radius: 1vw;
@@ -31,5 +32,65 @@
   }
 
   .item-text {
+    h1 {
+    }
+
+    h2 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 12px;
+    }
   }
+}
+
+// Small Breakpoint
+@media screen and (min-width: var.$sm) {
+}
+
+// Medium Breakpoint
+@media screen and (min-width: var.$md) {
+}
+
+// Large Breakpoint
+@media screen and (min-width: var.$lg) {
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var.$bg-main;
+    min-height: 100vh;
+  }
+
+  .resume-item {
+    display: flex;
+    flex-direction: row;
+
+    background-color: var.$bg-alt;
+    border-radius: 1vw;
+    padding: 1vw;
+    width: 90vw;
+
+    .item-img {
+      width: 10vw;
+      height: 10vw;
+    }
+
+    .item-text {
+      h1 {
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// Extre Large Breakpoint
+@media screen and (min-width: var.$xl) {
 }

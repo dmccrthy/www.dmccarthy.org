@@ -13,6 +13,7 @@ import me from "@img/me.jpg";
 const AboutMe = () => {
   return (
     <div className="about-background">
+      <h1 className="header">About Me:</h1>
       <div className="about">
         <div className="about-text">
           <AboutHeader />
@@ -28,6 +29,10 @@ const AboutMe = () => {
           <img src={me} />
         </div>
       </div>
+      {/* <div className="about-resume">
+        <h2>Checkout My Resume -</h2>
+        <button>My Resume</button>
+      </div> */}
     </div>
   );
 };

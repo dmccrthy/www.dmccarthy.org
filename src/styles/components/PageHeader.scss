@@ -1,9 +1,12 @@
 @use "@styles/variables" as var;
 
+// Start at lowest breakpoint <576px
 .page-header {
   display: flex;
   position: relative;
   align-items: center;
+  justify-content: center;
+
   background-color: var.$bg-main;
   background-image: url("@img/backing.png");
   background-size: cover;
@@ -11,24 +14,15 @@
 
   height: 100vh;
   width: 100vw;
+}
 
+.head {
   h1 {
-    font-size: 6em;
-    font-weight: bold;
-    margin-bottom: 1vh;
+    font-size: 40px;
   }
 
   p {
-    font-size: calc(1em + 1vw);
-    margin-top: 5vh;
-  }
-
-  hr {
-    max-height: 15px;
-    height: 1vw;
-    width: 45vw;
-    background: var.$gradient;
-    border: 0;
+    font-size: 15px;
   }
 
   h1,
@@ -36,61 +30,22 @@
     text-shadow: 2px 2px var.$bg-main;
   }
 
-  // Media Queries
-  @media screen and (max-width: var.$xl) {
-    h1 {
-      font-size: 5em;
-    }
+  hr {
+    background: var.$gradient;
+    border: 0;
 
-    hr {
-      width: 55vw;
-    }
-  }
-
-  @media screen and (max-width: var.$lg) {
-    h1 {
-      font-size: 3.7em;
-    }
-
-    hr {
-      width: 50vw;
-    }
-  }
-
-  @media screen and (max-width: var.$md) {
-    h1 {
-      font-size: 4em;
-    }
-
-    hr {
-      width: 75vw;
-    }
-
-    justify-content: center;
-  }
-
-  @media screen and (max-width: var.$sm) {
-    h1 {
-      font-size: 3em;
-    }
-
-    hr {
-      width: 90vw;
-    }
+    height: 5px;
+    width: 290px;
   }
 }
 
 .socials {
-  display: flex;
-
-  a {
-    margin: 0.5vw;
-    padding: 0.5vw;
-  }
-
+  // Base Icon Styles
   img {
-    max-width: 2vw;
-    min-width: 20px;
+    height: 25px;
+    width: 25px;
+    margin: 8px;
+
     filter: invert(100%) sepia(0%) saturate(7441%) hue-rotate(152deg)
       brightness(114%) contrast(103%);
     transition: 0.5s, filter 0s;
@@ -100,37 +55,129 @@
     transform: scale(1.05);
   }
 
+  // Add icon specific coloring
   .linkedin:hover {
-    filter: invert(30%) sepia(17%) saturate(1371%) hue-rotate(112deg)
-      brightness(97%) contrast(84%);
+    filter: invert(15%) sepia(96%) saturate(4352%) hue-rotate(356deg)
+      brightness(86%) contrast(84%);
   }
 
   .git:hover {
-    filter: invert(21%) sepia(85%) saturate(1519%) hue-rotate(202deg)
-      brightness(101%) contrast(99%);
+    filter: invert(57%) sepia(20%) saturate(1594%) hue-rotate(21deg)
+      brightness(96%) contrast(85%);
   }
 }
 
-.head {
-  display: flex;
-  flex-direction: column;
-
-  margin: 0 5vw 0 7vw;
-
-  @media screen and (max-width: var.$md) {
-    margin: 0;
-  }
-}
-
+// No photo until $lg breakpoint
 .photo-container {
-  @media screen and (max-width: var.$md) {
-    display: none;
+  display: none;
+}
+
+// Small Breakpoint
+@media screen and (min-width: var.$sm) {
+  .head {
+    h1 {
+      font-size: 70px;
+    }
+
+    p {
+      font-size: 25px;
+    }
+
+    hr {
+      height: 8px;
+      width: 500px;
+    }
+  }
+
+  .socials {
+    img {
+      height: 30px;
+      width: 30px;
+    }
   }
 }
 
-.headshot {
-  width: 30vw;
-  height: 30vw;
-  border: 5px solid #f8f8f8;
-  border-radius: 10%;
+// Medium Breakpoint
+@media screen and (min-width: var.$md) {
+  .page-header {
+    justify-content: start;
+    padding-left: 5vw;
+  }
+}
+
+// Large Breakpoint
+@media screen and (min-width: var.$lg) {
+  .lg-head {
+    display: flex;
+    flex-direction: column;
+
+    width: 50vw;
+  }
+
+  .head {
+    h1 {
+      font-size: 68px;
+    }
+  }
+
+  .photo-container {
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+
+    img {
+      width: 25vw;
+      height: 25vw;
+      border: 10px solid #f8f8f8;
+      border-radius: 10%;
+      transition: 0.5s;
+    }
+
+    img:hover {
+      box-shadow: 10px 10px var.$purple, -10px -10px var.$aqua;
+    }
+  }
+}
+
+// XL Breakpoint
+@media screen and (min-width: var.$xl) {
+  .page-header {
+    justify-content: center;
+  }
+
+  .lg-head {
+    width: 800px;
+  }
+
+  .head {
+    h1 {
+      font-size: 80px;
+    }
+
+    p {
+      font-size: 2em;
+    }
+
+    hr {
+      height: 12px;
+      width: 575px;
+    }
+  }
+
+  .socials {
+    img {
+      height: 35px;
+      width: 35px;
+      margin: 15px;
+    }
+  }
+
+  .photo-container {
+    width: 600px;
+
+    img {
+      width: 450px;
+      height: 450px;
+    }
+  }
 }

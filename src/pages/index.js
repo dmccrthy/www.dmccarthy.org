@@ -8,6 +8,7 @@ import Footer from "@components/Footer";
 import PageHeader from "@components/IndexPage/PageHeader";
 import AboutMe from "@components/IndexPage/AboutMe";
 import MoreSection from "@components/IndexPage/MoreSection";
+import ContactSection from "../components/IndexPage/ContactSection";
 
 // Styles
 import "@styles/global.scss";
@@ -15,13 +16,13 @@ import "@styles/global.scss";
 // Main Webpage
 const IndexPage = () => {
   return (
-    <>
+    <div className="fade-in-page">
       <Navbar />
       <PageHeader />
       <AboutMe />
-      <MoreSection />
+      <ContactSection />
       <Footer />
-    </>
+    </div>
   );
 };
 

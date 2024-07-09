@@ -14,8 +14,18 @@ const BlogPage = ({ data, pageContext }) => {
         slug={`/${pageContext.slug}/`}
       />
       <Navbar />
-      <h1>{pageContext.title}</h1>
-      <p>{pageContext.content}</p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "90vh",
+        }}
+      >
+        <h1>{pageContext.title}</h1>
+        <p>{pageContext.content}</p>
+      </div>
       <Footer />
     </>
   );
