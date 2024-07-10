@@ -97,21 +97,25 @@
   }
 }
 
-// Medium Breakpoint
-@media screen and (min-width: var.$md) {
-  .page-header {
-    justify-content: start;
-    padding-left: 5vw;
-  }
-}
+// // Medium Breakpoint
+// @media screen and (min-width: var.$md) {
+//   .page-header {
+//     justify-content: start;
+//     padding-left: 5vw;
+//   }
+// }
 
 // Large Breakpoint
 @media screen and (min-width: var.$lg) {
+  .page-header {
+    justify-content: space-evenly;
+  }
+
   .lg-head {
     display: flex;
     flex-direction: column;
 
-    width: 50vw;
+    width: 600px;
   }
 
   .head {
@@ -123,13 +127,13 @@
   .photo-container {
     display: flex;
     justify-content: center;
-    width: 50vw;
+    width: 400px;
 
     img {
-      width: 25vw;
-      height: 25vw;
+      width: 400px;
+      height: 400px;
       border: 10px solid #f8f8f8;
-      border-radius: 10%;
+      border-radius: 50px;
       transition: 0.5s;
     }
 
@@ -141,14 +145,6 @@
 
 // XL Breakpoint
 @media screen and (min-width: var.$xl) {
-  .page-header {
-    justify-content: center;
-  }
-
-  .lg-head {
-    width: 800px;
-  }
-
   .head {
     h1 {
       font-size: 80px;
@@ -169,15 +165,6 @@
       height: 35px;
       width: 35px;
       margin: 15px;
-    }
-  }
-
-  .photo-container {
-    width: 600px;
-
-    img {
-      width: 450px;
-      height: 450px;
     }
   }
 }

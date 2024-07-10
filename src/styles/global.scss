@@ -8,6 +8,7 @@
 
 html {
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 h1,
@@ -17,6 +18,8 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", Arial;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
   color: #ffffff;
 }
 
@@ -26,6 +29,7 @@ body {
 
 p {
   font-family: "Karla", "Times New Roman", Times, serif;
+  font-weight: normal;
   color: #ffffff;
 }
 
@@ -42,7 +46,7 @@ button {
 // Page fade-in effect
 .fade-in-page {
   background-color: white;
-  animation: fadeIn 2s;
+  animation: fadeIn 1s;
 }
 
 @keyframes fadeIn {
