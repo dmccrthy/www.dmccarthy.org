@@ -13,7 +13,7 @@ import me from "@img/me.jpg";
 const AboutMe = () => {
   return (
     <div className="about-background">
-      <h1 className="header">About Me:</h1>
+      <h2 className="header">About Me:</h2>
       <div className="about">
         <div className="about-text">
           <AboutHeader />

@@ -17,10 +17,6 @@
 }
 
 .head {
-  h1 {
-    font-size: 40px;
-  }
-
   p {
     font-size: 15px;
   }
@@ -73,12 +69,8 @@
 }
 
 // Small Breakpoint
-@media screen and (min-width: var.$sm) {
+@media (min-width: var.$sm) {
   .head {
-    h1 {
-      font-size: 70px;
-    }
-
     p {
       font-size: 25px;
     }
@@ -98,7 +90,7 @@
 }
 
 // // Medium Breakpoint
-// @media screen and (min-width: var.$md) {
+// @media (min-width: var.$md) {
 //   .page-header {
 //     justify-content: start;
 //     padding-left: 5vw;
@@ -106,7 +98,7 @@
 // }
 
 // Large Breakpoint
-@media screen and (min-width: var.$lg) {
+@media (min-width: var.$lg) {
   .page-header {
     justify-content: space-evenly;
   }
@@ -118,20 +110,14 @@
     width: 600px;
   }
 
-  .head {
-    h1 {
-      font-size: 68px;
-    }
-  }
-
   .photo-container {
     display: flex;
     justify-content: center;
-    width: 400px;
+    width: 300px;
 
     img {
-      width: 400px;
-      height: 400px;
+      width: 300px;
+      height: 300px;
       border: 10px solid #f8f8f8;
       border-radius: 50px;
       transition: 0.5s;
@@ -144,12 +130,8 @@
 }
 
 // XL Breakpoint
-@media screen and (min-width: var.$xl) {
+@media (min-width: var.$xl) {
   .head {
-    h1 {
-      font-size: 80px;
-    }
-
     p {
       font-size: 2em;
     }
@@ -165,6 +147,15 @@
       height: 35px;
       width: 35px;
       margin: 15px;
+    }
+  }
+
+  .photo-container {
+    width: 350px;
+
+    img {
+      width: 350px;
+      height: 350px;
     }
   }
 }

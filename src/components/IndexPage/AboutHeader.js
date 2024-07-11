@@ -3,7 +3,7 @@ import { ReactTyped } from "react-typed";
 
 const AboutHeader = () => {
   return (
-    <h1>
+    <h3>
       <span>And I'm </span>
       <ReactTyped
         strings={[
@@ -19,7 +19,7 @@ const AboutHeader = () => {
         loop
         className="highlight"
       />
-    </h1>
+    </h3>
   );
 };
 

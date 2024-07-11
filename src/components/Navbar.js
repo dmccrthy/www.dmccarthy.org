@@ -24,17 +24,17 @@ const Navbar = () => {
     <>
       <div id="nav" className="nav-wrapper">
         <nav className="nav-bar">
-          <Link to="/">
-            <h1 className="color-1">Home</h1>
+          <Link to="/" className="color-1">
+            Home
           </Link>
-          <Link to="/resume">
-            <h1 className="color-2">Resume</h1>
+          <Link to="/resume" className="color-2">
+            Resume
           </Link>
-          <Link to="/projects">
-            <h1 className="color-3">Projects</h1>
+          <Link to="/projects" className="color-3">
+            Projects
           </Link>
-          <Link to="/posts">
-            <h1 className="color-4"> Blog</h1>
+          <Link to="/posts" className="color-4">
+            Blog
           </Link>
         </nav>
       </div>
