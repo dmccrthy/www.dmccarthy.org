@@ -7,7 +7,6 @@ import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import PageHeader from "@components/IndexPage/PageHeader";
 import AboutMe from "@components/IndexPage/AboutMe";
-import MoreSection from "@components/IndexPage/MoreSection";
 import ContactSection from "../components/IndexPage/ContactSection";
 
 // Styles

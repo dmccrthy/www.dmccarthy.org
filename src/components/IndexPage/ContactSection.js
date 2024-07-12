@@ -41,7 +41,9 @@ const ContactSection = () => {
                 placeholder="Your Message"
               ></textarea>
             </div>
-            <button type="submit" value="Send" className="submit-button" />
+            <button type="submit" value="Send" className="submit-button">
+              <h4>Send</h4>
+            </button>
           </form>
         </div>
         <div className="account-links">

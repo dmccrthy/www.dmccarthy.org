@@ -21,7 +21,7 @@
 
 .form-container {
   width: 90vw;
-  height: 36vh;
+  height: 35vh;
 
   background-color: var.$bg-alt;
   border-radius: 1vh;
@@ -38,10 +38,12 @@
   textarea {
     margin-bottom: 1vh;
     width: 80vw;
+    height: 3vh;
   }
 
   .submit-button {
     width: 50vw;
+    height: 3vh;
   }
 }
 

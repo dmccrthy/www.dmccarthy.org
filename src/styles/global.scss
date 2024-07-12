@@ -121,8 +121,7 @@ button {
 
 // Page fade-in effect
 .fade-in-page {
-  background-color: white;
-  animation: fadeIn 1s;
+  animation: fadeIn 0.5s;
 }
 
 @keyframes fadeIn {
