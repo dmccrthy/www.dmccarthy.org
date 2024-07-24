@@ -30,7 +30,7 @@ const AboutMe = () => {
         </div>
       </div>
       {/* <div className="about-resume">
-        <h2>Checkout My Resume -</h2>
+        <h3>Checkout My Resume -</h3>
         <button>My Resume</button>
       </div> */}
     </div>

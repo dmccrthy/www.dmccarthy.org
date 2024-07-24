@@ -6,24 +6,14 @@ import { useEffect } from "react";
 // Styles
 import "@styles/components/Navbar.scss";
 
+import test from "@img/danmc1.svg";
+
 const Navbar = () => {
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleScroll = () => {
-    if (window.scrollY > 100) {
-      document.getElementById("nav").classList.add("nav-background");
-    } else {
-      document.getElementById("nav").classList.remove("nav-background");
-    }
-  };
-
   return (
     <>
       <div id="nav" className="nav-wrapper">
         <nav className="nav-bar">
+          {/* <img src={test} /> */}
           <Link to="/" className="color-1">
             Home
           </Link>

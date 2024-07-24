@@ -14,7 +14,7 @@
 
 ## 📝 License
 
-This Website is provided under the MIT license. Feel free to use it as inspiration for your own website.
+This Website is provided under the GPL-3 license. Feel free to use it as inspiration for your own website.
 
 ## 🏁 Getting Started
 

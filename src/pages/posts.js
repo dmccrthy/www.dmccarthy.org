@@ -12,7 +12,7 @@ import FetchMarkdown from "@src/hooks/graphql";
 const PageContainer = styled.div`
   display: flex;
   width: 100vw;
-  background-color: #191919;
+  background-color: #1d2021;
 `;
 
 const PostList = styled.div`
@@ -25,7 +25,7 @@ const PostList = styled.div`
   margin-left: 5vw;
   margin-right: 5vw;
 
-  h1 {
+  h2 {
     margin-left: 1vw;
     margin-top: 10vh;
   }
@@ -63,12 +63,12 @@ const BlogPage = () => {
       <div>
         <PageContainer>
           <PostList>
-            <h1 style={{ marginBottom: "10px" }}>Posts:</h1>
+            <h2 style={{ marginBottom: "10px" }}>Posts:</h2>
             {posts.map(({ node }) => (
               <PostCard>
                 <Link to={"/posts/" + node.frontmatter.slug}>
-                  <h2> {node.frontmatter.title}</h2>
-                  <h3> {node.frontmatter.date} </h3>
+                  <h3> {node.frontmatter.title}</h3>
+                  <h4> {node.frontmatter.date} </h4>
                   <p> {node.frontmatter.excerpt} </p>
                 </Link>
               </PostCard>

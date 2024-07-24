@@ -4,8 +4,8 @@
   position: fixed;
   top: 0;
   z-index: 30;
-  background: rgba(0, 0, 0, 0);
 
+  background: rgba(0, 0, 0, 0);
   width: 100vw;
   height: 10vh;
 
@@ -64,10 +64,12 @@
 
 @media screen and (min-width: var.$md) {
   .nav-wrapper {
+    position: relative;
     display: flex;
     justify-content: end;
     align-items: center;
 
+    background-color: var.$bg-main;
     margin-top: 0;
   }
 
@@ -76,7 +78,7 @@
     justify-content: end;
     align-items: center;
 
-    margin-top: 2vw;
+    margin: 0 0 0 0;
     margin-right: 1vw;
   }
 }
