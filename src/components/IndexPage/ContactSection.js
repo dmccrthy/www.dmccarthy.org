@@ -10,7 +10,7 @@ const ContactSection = () => {
   return (
     <div className="contact-wrapper">
       <div className="contact-header">
-        <h1>Get in Contact:</h1>
+        <h2>Get in Contact:</h2>
       </div>
       <div className="contact-content">
         <div className="form-container">
@@ -41,7 +41,9 @@ const ContactSection = () => {
                 placeholder="Your Message"
               ></textarea>
             </div>
-            <input type="submit" value="Send" className="submit-button" />
+            <button type="submit" value="Send" className="submit-button">
+              <h4>Send</h4>
+            </button>
           </form>
         </div>
         <div className="account-links">

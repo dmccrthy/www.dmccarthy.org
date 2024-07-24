@@ -20,7 +20,7 @@ const Footer = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/dmccrthy/dmccrthy.github.io"
+              href="https://github.com/dmccrthy/www.dmccarthy.org"
             >
               GitHub
             </a>

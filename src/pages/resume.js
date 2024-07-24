@@ -18,9 +18,9 @@ const ResumePage = () => {
     <>
       <Navbar />
       <div className="page-container">
-        {/* <h1>My Resume</h1> */}
+        <h2>My Resume</h2>
         <div className="resume-section">
-          <h1>Education:</h1>
+          <h3>Education:</h3>
           <ResumeItem
             image={unh}
             header="University of New Hampshire"
@@ -29,7 +29,7 @@ const ResumePage = () => {
           />
         </div>
         <div className="resume-section">
-          <h1>Experience:</h1>
+          <h3>Experience:</h3>
           <ResumeItem
             image={iol}
             header="IPv6 Test Technician"

@@ -8,6 +8,7 @@
 
 html {
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 h1,
@@ -17,7 +18,22 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", Arial;
+  font-weight: 100;
+  line-height: 110%;
+  -webkit-font-smoothing: antialiased;
   color: #ffffff;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 body {
@@ -26,10 +42,14 @@ body {
 
 p {
   font-family: "Karla", "Times New Roman", Times, serif;
+  font-weight: normal;
   color: #ffffff;
 }
 
 a {
+  font-family: "Montserrat", Arial;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
   color: #ffffff;
 }
 
@@ -39,17 +59,62 @@ button {
   transition: 0.5s;
 }
 
-// Page fade-in effect
-.fade-in-page {
-  background-color: white;
-  animation: fadeIn 2s;
+// Small Breakpoint
+@media (min-width: var.$sm) {
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+// Medium Breakpoint
+@media (min-width: var.$md) {
+  // h1 {
+  //   font-size: 70px;
+  // }
+
+  // h2 {
+  //   font-size: 40px;
+  // }
+
+  // h3 {
+  //   font-size: 25px;
+  // }
+}
+
+// Large Breakpoint
+@media (min-width: var.$lg) {
+  // h1 {
+  //   font-size: 70px;
+  // }
+
+  // h2 {
+  //   font-size: 40px;
+  // }
+
+  h3 {
+    font-size: 30px;
   }
-  100% {
-    opacity: 1;
+}
+
+// XL Breakpoint
+@media (min-width: var.$xl) {
+  h1 {
+    font-size: 80px;
   }
+
+  // h2 {
+  //   font-size: 40px;
+  // }
+
+  // h3 {
+  //   font-size: 30px;
+  // }
 }
