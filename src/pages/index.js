@@ -2,26 +2,20 @@
 import React from "react";
 
 // Components
-import DefaultHead from "@components/SEO";
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
+import DefaultHead from "@components/Head";
 import PageHeader from "@components/IndexPage/PageHeader";
 import AboutMe from "@components/IndexPage/AboutMe";
-import ContactSection from "../components/IndexPage/ContactSection";
-
-// Styles
-import "@styles/global.scss";
+import ContactSection from "@components/IndexPage/ContactSection";
+import Layout from "@components/Layout";
 
 // Main Webpage
 const IndexPage = () => {
   return (
-    <div className="fade-in-page">
-      <Navbar />
+    <Layout className="fade-in-page">
       <PageHeader />
       <AboutMe />
       <ContactSection />
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 

@@ -7,65 +7,82 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var.$bg-main;
-  background-image: url("@img/backing.png");
+  // background-image: url("@img/backing.png");
   background-size: cover;
   overflow: hidden;
 
   height: 100vh;
   width: 100vw;
-}
 
-.head {
-  p {
-    font-size: 15px;
+  @include var.themed() {
+    background-color: var.t("bg");
   }
 
-  h1,
-  p {
-    text-shadow: 2px 2px var.$bg-main;
-  }
+  .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  hr {
-    background: var.$gradient;
-    border: 0;
-
-    height: 5px;
-    width: 290px;
+    h1 {
+      letter-spacing: 2px;
+      line-height: 170%;
+    }
   }
 }
 
-.socials {
-  // Base Icon Styles
-  img {
-    height: 25px;
-    width: 25px;
-    margin: 8px;
+.header-bar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 
-    filter: invert(100%) sepia(0%) saturate(7441%) hue-rotate(152deg)
-      brightness(114%) contrast(103%);
-    transition: 0.5s, filter 0s;
+  .circle {
+    background-color: black;
+    width: 2vh;
+    height: 2vh;
+    border-radius: 100%;
   }
 
-  img:hover {
-    transform: scale(1.05);
+  .red {
+    background-color: var.$red;
   }
 
-  // Add icon specific coloring
-  .linkedin:hover {
-    filter: invert(15%) sepia(96%) saturate(4352%) hue-rotate(356deg)
-      brightness(86%) contrast(84%);
+  .green {
+    background-color: var.$green;
   }
 
-  .git:hover {
-    filter: invert(57%) sepia(20%) saturate(1594%) hue-rotate(21deg)
-      brightness(96%) contrast(85%);
+  .yellow {
+    background-color: var.$yellow;
+  }
+
+  .blue {
+    background-color: var.$blue;
   }
 }
 
-// No photo until $lg breakpoint
-.photo-container {
-  display: none;
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .info-row {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    transition: 0.5s;
+
+    img {
+      height: 30px;
+      width: 30px;
+      margin-right: 5px;
+
+      @include var.themed() {
+        filter: var.t("filter");
+      }
+    }
+  }
+
+  .info-row:hover {
+  }
 }
 
 // Small Breakpoint
@@ -73,18 +90,6 @@
   .head {
     p {
       font-size: 25px;
-    }
-
-    hr {
-      height: 8px;
-      width: 500px;
-    }
-  }
-
-  .socials {
-    img {
-      height: 30px;
-      width: 30px;
     }
   }
 }
@@ -109,24 +114,6 @@
 
     width: 600px;
   }
-
-  .photo-container {
-    display: flex;
-    justify-content: center;
-    width: 300px;
-
-    img {
-      width: 300px;
-      height: 300px;
-      border: 6px solid #f8f8f8;
-      border-radius: 50px;
-      transition: 0.5s;
-    }
-
-    img:hover {
-      box-shadow: 10px 10px var.$purple, -10px -10px var.$aqua;
-    }
-  }
 }
 
 // XL Breakpoint
@@ -134,28 +121,6 @@
   .head {
     p {
       font-size: 2em;
-    }
-
-    hr {
-      height: 12px;
-      width: 575px;
-    }
-  }
-
-  .socials {
-    img {
-      height: 35px;
-      width: 35px;
-      margin: 15px;
-    }
-  }
-
-  .photo-container {
-    width: 350px;
-
-    img {
-      width: 350px;
-      height: 350px;
     }
   }
 }

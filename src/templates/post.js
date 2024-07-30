@@ -2,18 +2,16 @@
 import React from "react";
 
 // Components
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
-import DefaultHead from "@components/SEO";
+import DefaultHead from "@components/Head";
+import Layout from "@components/Layout";
 
 const BlogPage = ({ data, pageContext }) => {
   return (
-    <>
+    <Layout>
       <DefaultHead
         title={pageContext.title + " | Dan McCarthy"}
         slug={`/${pageContext.slug}/`}
       />
-      <Navbar />
       <div
         style={{
           display: "flex",
@@ -26,8 +24,7 @@ const BlogPage = ({ data, pageContext }) => {
         <h1>{pageContext.title}</h1>
         <p>{pageContext.content}</p>
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

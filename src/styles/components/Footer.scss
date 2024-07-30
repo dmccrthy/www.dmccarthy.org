@@ -5,9 +5,11 @@
   flex-direction: column;
 
   width: 100vw;
-
-  background-color: var.$bg-alt;
   color: #ffffff;
+
+  @include var.themed() {
+    background-color: var.t("alt");
+  }
 }
 
 .footer-item {
@@ -23,7 +25,6 @@
   }
 
   a {
-    color: #ffffff;
     transition: 1s;
   }
 
@@ -52,14 +53,4 @@
   z-index: 2;
 
   background: var.$gradient;
-}
-
-@media screen and (min-width: var.$sm) {
-  .footer-item {
-    justify-content: start;
-
-    img {
-      display: inline;
-    }
-  }
 }

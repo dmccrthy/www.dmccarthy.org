@@ -1,6 +1,6 @@
 import React from "react";
 
-import DefaultHead from "@components/SEO";
+import DefaultHead from "@components/Head";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 

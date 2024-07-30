@@ -1,7 +1,10 @@
+// Packages
 import React from "react";
 
+// Styles
 import "@styles/components/ContactSection.scss";
 
+// Images
 import linkedin from "@img/icons/linkedin.svg";
 import github from "@img/icons/github.svg";
 import mail from "@img/icons/mail.svg";
@@ -34,18 +37,14 @@ const ContactSection = () => {
             </div>
             <div>
               <h3>Message:</h3>
-              <textarea
-                name="body"
-                rows="5"
-                cols="30"
-                placeholder="Your Message"
-              ></textarea>
+              <input name="body" placeholder="Your Message"></input>
             </div>
             <button type="submit" value="Send" className="submit-button">
               <h4>Send</h4>
             </button>
           </form>
         </div>
+        {/* TODO: Convert Account Links to Component */}
         <div className="account-links">
           <a
             target="_blank"

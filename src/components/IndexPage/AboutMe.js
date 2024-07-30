@@ -8,7 +8,7 @@ import AboutHeader from "@components/IndexPage/AboutHeader";
 import "@styles/components/AboutMe.scss";
 
 // Images
-import me from "@img/me.jpg";
+import headshot from "@img/headshot.jpg";
 
 const AboutMe = () => {
   return (
@@ -18,15 +18,15 @@ const AboutMe = () => {
         <div className="about-text">
           <AboutHeader />
           <p>
-            I am a Computer Science Major interested in all things programming
-            and software development. I’m currently working towards a BS in
-            Computer Science at the University of New Hampshire and in my free
-            time I like to work on different projects usually in Python or
-            Javascript.
+            Hi again! My name is Dan and I'm a Computer Science student
+            interested in all things software development. I’m currently working
+            towards a BS in Computer Science at the University of New Hampshire
+            and in my free time I like to work on different projects usually in
+            Python or Javascript.
           </p>
         </div>
         <div className="about-image">
-          <img src={me} />
+          <img src={headshot} />
         </div>
       </div>
       {/* <div className="about-resume">

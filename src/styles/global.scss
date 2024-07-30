@@ -3,7 +3,10 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  color-scheme: dark;
+
+  @include var.themed() {
+    color-scheme: var.t("scheme");
+  }
 }
 
 html {
@@ -17,11 +20,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", Arial;
-  font-weight: 100;
-  line-height: 110%;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  line-height: 140%;
   -webkit-font-smoothing: antialiased;
-  color: #ffffff;
+
+  @include var.themed() {
+    color: var.t("text");
+  }
 }
 
 h1 {
@@ -37,20 +43,28 @@ h3 {
 }
 
 body {
-  color: #ffffff;
+  @include var.themed() {
+    color: var.t("text");
+  }
 }
 
 p {
   font-family: "Karla", "Times New Roman", Times, serif;
   font-weight: normal;
-  color: #ffffff;
+
+  @include var.themed() {
+    color: var.t("text");
+  }
 }
 
 a {
-  font-family: "Montserrat", Arial;
+  font-family: "Inter", Arial;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
-  color: #ffffff;
+
+  @include var.themed() {
+    color: var.t("text");
+  }
 }
 
 button {
@@ -107,7 +121,7 @@ button {
 // XL Breakpoint
 @media (min-width: var.$xl) {
   h1 {
-    font-size: 80px;
+    font-size: 75px;
   }
 
   // h2 {

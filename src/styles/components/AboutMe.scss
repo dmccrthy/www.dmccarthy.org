@@ -9,7 +9,9 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: var.$bg-alt;
+  @include var.themed() {
+    background-color: var.t("alt");
+  }
 }
 
 .header {
@@ -49,15 +51,17 @@
     width: 50vw;
     height: 50vw;
     border-radius: 10%;
-    border: 6px solid #f8f8f8;
     overflow: hidden;
     margin: 0;
-    background-color: #f8f8f8;
     transition: 0.5s;
+    @include var.themed() {
+      background-color: var.t("bg");
+      border: 6px solid var.t("bg");
+    }
   }
 
   img:hover {
-    box-shadow: -10px 10px var.$yellow, 10px -10px var.$green;
+    box-shadow: 10px 10px var.$purple, -10px -10px var.$aqua;
   }
 }
 

@@ -3,13 +3,20 @@
 // Start at lowest breakpoint <576px
 .contact-wrapper {
   width: 100vw;
-  background-color: var.$bg-main;
+
+  @include var.themed() {
+    background-color: var.t("bg");
+  }
 }
 
 .contact-header {
   display: flex;
   justify-content: center;
   padding: 8vw;
+
+  @include var.themed() {
+    background-color: var.t("bg");
+  }
 }
 
 .contact-content {
@@ -23,9 +30,12 @@
   width: 90vw;
   height: 35vh;
 
-  background-color: var.$bg-alt;
   border-radius: 1vh;
   padding: 5vw;
+
+  @include var.themed() {
+    background-color: var.t("alt");
+  }
 }
 
 .main-form {
@@ -88,11 +98,13 @@
 .link-icon {
   width: 50px;
   height: 50px;
-  filter: invert(100%) sepia(0%) saturate(7441%) hue-rotate(152deg)
-    brightness(114%) contrast(103%);
   transition: 0.5s;
 
   margin: 10px;
+
+  @include var.themed() {
+    filter: var.t("filter");
+  }
 }
 
 // Small Breakpoint
@@ -107,7 +119,6 @@
     width: 90vw;
     height: 40vh;
 
-    background-color: var.$bg-alt;
     border-radius: 1vh;
     padding: 5vw;
   }
@@ -135,9 +146,6 @@
     width: 60vw;
     height: 50vh;
 
-    background-color: var.$bg-alt;
-    border-radius: 1vh;
-    padding: 5vw;
     margin: 5vw;
   }
 

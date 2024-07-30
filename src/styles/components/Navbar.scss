@@ -20,20 +20,8 @@
   z-index: 1;
   margin: 1vw 1vh 0 0;
 
-  .logo {
-    cursor: pointer;
-
-    img {
-      max-width: 4vw;
-      min-width: 30px;
-      filter: invert(0%) sepia(72%) saturate(4950%) hue-rotate(106deg)
-        brightness(82%) contrast(87%);
-    }
-  }
-
   a {
     margin-right: 2vw;
-    color: #ffffff;
     text-decoration: none;
     padding: 10px;
     margin-top: 0vh;
@@ -60,6 +48,10 @@
   .color-4:hover {
     color: var.$blue;
   }
+
+  .nav-icon {
+    border-width: 0px;
+  }
 }
 
 @media screen and (min-width: var.$md) {
@@ -69,16 +61,42 @@
     justify-content: end;
     align-items: center;
 
-    background-color: var.$bg-main;
     margin-top: 0;
-  }
+    border-bottom: 1px solid var.$bg-accent-dark;
 
-  .nav-bar {
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
+    @include var.themed() {
+      background-color: var.t("bg");
+    }
 
-    margin: 0 0 0 0;
-    margin-right: 1vw;
+    .nav-bar {
+      flex-direction: row;
+      justify-content: end;
+      align-items: center;
+
+      margin: 0 0 0 0;
+      margin-right: 1vw;
+
+      .nav-icon {
+        border-width: 0px;
+        margin-right: 1vw;
+        margin-top: 0vh;
+
+        img {
+          width: 2vw;
+          height: 2vw;
+
+          @include var.themed() {
+            filter: var.t("filter");
+          }
+        }
+      }
+
+      .nav-icon:hover {
+        margin-top: 0.5vh;
+
+        img {
+        }
+      }
+    }
   }
 }

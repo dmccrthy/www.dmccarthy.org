@@ -1,5 +1,8 @@
+// Packages
 import React from "react";
 import { Helmet } from "react-helmet";
+
+// Images
 import favicon from "@img/favicon.png";
 
 const DefaultHead = ({ title, slug }) => {

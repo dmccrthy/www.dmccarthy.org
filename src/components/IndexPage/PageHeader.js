@@ -5,10 +5,9 @@ import { ReactTyped } from "react-typed";
 // Styles
 import "@styles/components/PageHeader.scss";
 
-// Images
-import linkedin from "@img/icons/linkedin.svg";
-import github from "@img/icons/github.svg";
-import headshot from "@img/headshot.jpg";
+// images
+import briefcase from "@img/icons/briefcase.svg";
+import pin from "@img/icons/marker.svg";
 
 const PageHeader = () => {
   return (
@@ -17,33 +16,26 @@ const PageHeader = () => {
         <div className="head">
           <p>Hi, I'm</p>
           <h1>
-            <ReactTyped
-              strings={["Dan McCarthy"]}
-              typeSpeed={90}
-              showCursor={false}
-            />
+            <ReactTyped strings={["Dan McCarthy"]} typeSpeed={90} />
           </h1>
-          <hr></hr>
+          <div className="header-bar">
+            <div className="circle red" />
+            <div className="circle green" />
+            <div className="circle yellow" />
+            <div className="circle blue" />
+          </div>
         </div>
-        <div className="socials">
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/danmcc/"
-          >
-            <img className="linkedin" src={linkedin} />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/dmccrthy"
-          >
-            <img className="git" src={github} />
-          </a>
+        {/* TODO: Move info row to component */}
+        <div className="info-container">
+          <div className="info-row">
+            <img src={briefcase} />
+            <h3>Software Developer</h3>
+          </div>
+          <div className="info-row">
+            <img src={pin} />
+            <h3>New Hampshire</h3>
+          </div>
         </div>
-      </div>
-      <div className="photo-container">
-        <img src={headshot} />
       </div>
     </div>
   );

@@ -1,10 +1,9 @@
 import React from "react";
 
 // Components
-import DefaultHead from "@components/SEO";
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
+import DefaultHead from "@components/Head";
 import ResumeItem from "@components/ResumePage/ResumeItem";
+import Layout from "@components/Layout";
 
 // Styles
 import "@styles/components/ResumePage.scss";
@@ -15,8 +14,7 @@ import iol from "@img/IOL.png";
 
 const ResumePage = () => {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <div className="page-container">
         <h2>My Resume</h2>
         <div className="resume-section">
@@ -49,8 +47,7 @@ const ResumePage = () => {
           <h1>Skills:</h1>
         </div> */}
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

@@ -4,16 +4,13 @@ import React from "react";
 // Styles
 import "@styles/components/Footer.scss";
 
-// Images
-import logo from "@img/footer.png";
-
+// Footer Component
 const Footer = () => {
   return (
     <>
       <div className="footer-wrapper">
         <div className="footer-item">
-          <img src={logo} alt="danmc" />
-          <p>© Dan McCarthy 2023-24</p>
+          <p>© 2023-24 Dan McCarthy</p>
           <p>|</p>
           <p>
             Hosted on{" "}

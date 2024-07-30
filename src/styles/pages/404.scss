@@ -1,7 +1,12 @@
 @use "@styles/variables" as var;
 
 .error-style {
-  margin: 10vw;
+  height: 90vh;
+  padding: 10vw;
+
+  @include var.themed() {
+    background-color: var.t("bg");
+  }
 
   h1 {
     font-size: 80px;
@@ -16,7 +21,9 @@
   }
 
   button {
-    background-color: var.$bg-accent;
+    @include var.themed() {
+      background-color: var.t("alt");
+    }
     width: 200px;
     height: 40px;
 

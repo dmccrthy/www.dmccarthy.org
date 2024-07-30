@@ -1,2 +1,2 @@
-require("@fontsource/montserrat");
 require("@fontsource/karla");
+require("@fontsource/inter");

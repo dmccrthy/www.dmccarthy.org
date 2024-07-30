@@ -4,7 +4,7 @@ import { ReactTyped } from "react-typed";
 const AboutHeader = () => {
   return (
     <h3>
-      <span>And I'm </span>
+      <span>I'm </span>
       <ReactTyped
         strings={[
           "a Student",
