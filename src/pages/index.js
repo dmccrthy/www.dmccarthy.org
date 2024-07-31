@@ -12,6 +12,7 @@ import Layout from "@components/Layout";
 const IndexPage = () => {
   return (
     <Layout className="fade-in-page">
+      <DefaultHead title={"Dan McCarthy"} slug={""} />
       <PageHeader />
       <AboutMe />
       <ContactSection />
@@ -20,8 +21,3 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
-
-// Header Contents
-export const Head = () => (
-  <DefaultHead title={"Dan McCarthy - Student & Developer"} slug={""} />
-);

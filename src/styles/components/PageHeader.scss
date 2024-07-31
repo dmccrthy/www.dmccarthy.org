@@ -26,6 +26,10 @@
     h1 {
       letter-spacing: 2px;
       line-height: 170%;
+
+      span {
+        transition: 0s;
+      }
     }
   }
 }
@@ -69,20 +73,32 @@
     align-items: center;
     margin-top: 30px;
     transition: 0.5s;
-
-    img {
-      height: 30px;
-      width: 30px;
-      margin-right: 5px;
-
-      @include var.themed() {
-        filter: var.t("filter");
-      }
-    }
   }
 
   .info-row:hover {
   }
+}
+
+.info-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+
+  @include var.themed() {
+    filter: var.t("filter");
+  }
+}
+
+.arrow-container {
+  position: absolute;
+  bottom: 10vh;
+  transition: 0.5s;
+}
+
+.arrow-container:hover {
+  bottom: 9vh;
+  cursor: pointer;
+  scroll-behavior: smooth;
 }
 
 // Small Breakpoint

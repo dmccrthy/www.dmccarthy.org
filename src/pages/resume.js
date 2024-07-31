@@ -16,7 +16,7 @@ const ResumePage = () => {
   return (
     <Layout>
       <div className="page-container">
-        <h2>My Resume</h2>
+        <h2>My Resume:</h2>
         <div className="resume-section">
           <h3>Education:</h3>
           <ResumeItem

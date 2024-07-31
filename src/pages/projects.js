@@ -16,7 +16,7 @@ const ProjectPage = () => {
           height: "90vh",
         }}
       >
-        <h1>I'm Working on it...</h1>
+        <h2>I'm Working on it...</h2>
       </div>
       <Footer />
     </>
