@@ -20,16 +20,14 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 exports.createPages = async function ({ actions, graphql }) {
   const { createPage } = actions;
 
-  const res = await graphql(`
+  const { data } = await graphql(`
     query {
       allMarkdownRemark {
         edges {
           node {
             frontmatter {
-              title
               slug
             }
-            rawMarkdownBody
           }
         }
       }
@@ -37,16 +35,14 @@ exports.createPages = async function ({ actions, graphql }) {
   `);
 
   try {
-    const edges = res.data.allMarkdownRemark.edges;
+    const edges = data.allMarkdownRemark.edges;
 
     edges.forEach(({ node }) => {
       createPage({
         path: "posts/" + node.frontmatter.slug,
-        component: path.resolve("src/templates/post.js"),
+        component: path.resolve("src/templates/BlogPost.js"),
         context: {
-          title: node.frontmatter.title,
           slug: node.frontmatter.slug,
-          content: node.rawMarkdownBody,
         },
       });
     });

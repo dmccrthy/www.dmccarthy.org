@@ -1,16 +1,16 @@
 import React from "react";
 
 // Components
-import DefaultHead from "@components/Head";
+import DefaultHead from "@components/Common/Head";
+import Layout from "@components/Common/Layout";
 import ResumeItem from "@components/ResumePage/ResumeItem";
-import Layout from "@components/Layout";
 
 // Styles
-import "@styles/components/ResumePage.scss";
+import "@styles/pages/ResumePage.scss";
 
 // Images
-import unh from "@img/UNH.png";
-import iol from "@img/IOL.png";
+import unh from "@img/resume/UNH.png";
+import iol from "@img/resume/IOL.png";
 
 const ResumePage = () => {
   return (
@@ -23,7 +23,7 @@ const ResumePage = () => {
             image={unh}
             header="University of New Hampshire"
             subtitle="September 2024 - May 2028 | B.S. in Computer Science"
-            content="Currently studying computer science at UNH. "
+            // content="Currently studying computer science at UNH. "
           />
         </div>
         <div className="resume-section">
@@ -54,5 +54,5 @@ const ResumePage = () => {
 export default ResumePage;
 
 export const Head = () => (
-  <DefaultHead title={"Resume | Dan McCarthy"} slug={"/resume/"} />
+  <DefaultHead title={"Resume | Dan McCarthy"} slug={"resume/"} />
 );

@@ -34,17 +34,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-  img {
-    display: none;
-    margin-right: auto;
-    margin-left: 2vw;
-
-    max-width: 4vw;
-    min-width: 50px;
-    filter: invert(7%) sepia(6%) saturate(1023%) hue-rotate(149deg)
-      brightness(103%) contrast(87%);
-  }
 }
 
 .gradient-bar {

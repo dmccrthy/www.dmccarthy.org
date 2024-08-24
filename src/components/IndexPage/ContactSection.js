@@ -50,28 +50,28 @@ const ContactSection = () => {
             target="_blank"
             rel="noreferrer"
             href="https://github.com/dmccrthy"
-            className="link-tag"
+            className="link-tag filter-red"
           >
             <img className="link-icon" src={github} />
-            <h1>Github</h1>
+            <h3>Github</h3>
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href="https://www.linkedin.com/in/danmcc/"
-            className="link-tag"
+            className="link-tag filter-green"
           >
             <img className="link-icon" src={linkedin} />
-            <h1>LinkedIn</h1>
+            <h3>LinkedIn</h3>
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href="mailto:info@dmccarthy.org"
-            className="link-tag"
+            className="link-tag filter-yellow"
           >
             <img className="link-icon" src={mail} />
-            <h1>info@dmccarthy.org</h1>
+            <h3>Email</h3>
           </a>
         </div>
       </div>

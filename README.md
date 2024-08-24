@@ -77,7 +77,7 @@ This Website is provided under the GPL-3 license. Feel free to use it as inspira
 
 - [Gatsbyjs](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 - [React](https://react.dev/reference/react)
-- [Sass]()
+- [Sass](https://sass-lang.com/documentation/syntax/)
 
 ##
 

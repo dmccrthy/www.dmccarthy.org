@@ -1,70 +1,22 @@
 @use "@styles/variables" as var;
 
 * {
+  // General stuff
   box-sizing: border-box;
   margin: 0;
 
   @include var.themed() {
     color-scheme: var.t("scheme");
   }
+
+  // Font Rendering
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-synthesis: none !important;
 }
 
 html {
   overflow-x: hidden;
-  -webkit-text-size-adjust: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Inter, sans-serif;
-  font-weight: 700;
-  line-height: 140%;
-  -webkit-font-smoothing: antialiased;
-
-  @include var.themed() {
-    color: var.t("text");
-  }
-}
-
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 20px;
-}
-
-body {
-  @include var.themed() {
-    color: var.t("text");
-  }
-}
-
-p {
-  font-family: "Karla", "Times New Roman", Times, serif;
-  font-weight: normal;
-
-  @include var.themed() {
-    color: var.t("text");
-  }
-}
-
-a {
-  font-family: "Inter", Arial;
-  font-weight: 100;
-  -webkit-font-smoothing: antialiased;
-
-  @include var.themed() {
-    color: var.t("text");
-  }
 }
 
 button {
@@ -73,62 +25,95 @@ button {
   transition: 0.5s;
 }
 
-// Small Breakpoint
-@media (min-width: var.$sm) {
-  h1 {
-    font-size: 70px;
-  }
+// // Default Text Styling
 
-  h2 {
-    font-size: 40px;
-  }
-
-  h3 {
-    font-size: 25px;
-  }
-}
-
-// Medium Breakpoint
-@media (min-width: var.$md) {
-  // h1 {
-  //   font-size: 70px;
-  // }
-
-  // h2 {
-  //   font-size: 40px;
-  // }
-
-  // h3 {
-  //   font-size: 25px;
-  // }
-}
-
-// Large Breakpoint
-@media (min-width: var.$lg) {
-  // h1 {
-  //   font-size: 70px;
-  // }
-
-  // h2 {
-  //   font-size: 40px;
-  // }
-
-  h3 {
-    font-size: 30px;
+// Set text color
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+p,
+a {
+  @include var.themed() {
+    color: var.t("text");
   }
 }
 
-// XL Breakpoint
+// Set header deaults
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Inter, sans-serif;
+  font-weight: normal;
+  line-height: 140%;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Set paragraph defaults
+p {
+  font-family: "Karla", "Times New Roman", Times, serif;
+  font-weight: normal;
+}
+
+// h1 - Used for main page headers
+// IE: Article Titles, or name on home page
+h1,
+.h1 {
+  font-size: calc(2.5rem + 1.25vw);
+  font-weight: 700;
+}
+
+// h2 - Used for section headers
+// IE: Header for article section
+h2,
+.h2 {
+  font-size: calc(1.35rem + 0.9vw);
+  font-weight: 600;
+}
+
+// h3 - Used for important text in forms/buttons
+// IE: Navbar buttons, and the contac form
+h3,
+.h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+
+p,
+.p {
+  font-size: calc(1rem + 0.3vw);
+  line-height: 120%;
+}
+
+// Font Breakpoint
 @media (min-width: var.$xl) {
-  h1 {
-    font-size: 75px;
+  h1,
+  .h1 {
+    font-size: 4rem;
   }
 
-  // h2 {
-  //   font-size: 40px;
-  // }
+  h2,
+  .h2 {
+    font-size: 2rem;
+  }
 
-  // h3 {
-  //   font-size: 30px;
-  // }
+  h3,
+  .h3 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  .p {
+    font-size: 1.25rem;
+  }
+}
+
+// Global class hide - For toggable elements
+.hide {
+  display: none;
 }

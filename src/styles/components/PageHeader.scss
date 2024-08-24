@@ -3,13 +3,8 @@
 // Start at lowest breakpoint <576px
 .page-header {
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
-
-  // background-image: url("@img/backing.png");
-  background-size: cover;
-  overflow: hidden;
 
   height: 100vh;
   width: 100vw;
@@ -18,7 +13,7 @@
     background-color: var.t("bg");
   }
 
-  .head {
+  .header-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,86 +22,79 @@
       letter-spacing: 2px;
       line-height: 170%;
 
+      // Fixs weird transition on theme change
       span {
         transition: 0s;
       }
     }
   }
-}
 
-.header-bar {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-
-  .circle {
-    background-color: black;
-    width: 2vh;
-    height: 2vh;
-    border-radius: 100%;
-  }
-
-  .red {
-    background-color: var.$red;
-  }
-
-  .green {
-    background-color: var.$green;
-  }
-
-  .yellow {
-    background-color: var.$yellow;
-  }
-
-  .blue {
-    background-color: var.$blue;
-  }
-}
-
-.info-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .info-row {
+  .header-bar {
     display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .circle {
+      background-color: black;
+      width: 14px;
+      height: 14px;
+      border-radius: 100%;
+    }
+
+    .red {
+      background-color: var.$red;
+    }
+
+    .green {
+      background-color: var.$green;
+    }
+
+    .yellow {
+      background-color: var.$yellow;
+    }
+
+    .blue {
+      background-color: var.$blue;
+    }
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      transition: 0.5s;
+    }
+
+    // .info-row:hover {
+    //   margin-top: 40px;
+    // }
+  }
+
+  .info-icon {
+    height: 25px;
+    width: 25px;
+    margin: 0 10px 4px 0;
+
+    @include var.themed() {
+      stroke: var.t("text");
+    }
+  }
+
+  .arrow-container {
+    position: absolute;
+    bottom: 10vh;
     transition: 0.5s;
   }
 
-  .info-row:hover {
-  }
-}
-
-.info-icon {
-  height: 30px;
-  width: 30px;
-  margin-right: 5px;
-
-  @include var.themed() {
-    filter: var.t("filter");
-  }
-}
-
-.arrow-container {
-  position: absolute;
-  bottom: 10vh;
-  transition: 0.5s;
-}
-
-.arrow-container:hover {
-  bottom: 9vh;
-  cursor: pointer;
-  scroll-behavior: smooth;
-}
-
-// Small Breakpoint
-@media (min-width: var.$sm) {
-  .head {
-    p {
-      font-size: 25px;
-    }
+  .arrow-container:hover {
+    bottom: 9vh;
+    cursor: pointer;
+    scroll-behavior: smooth;
   }
 }
 
@@ -115,6 +103,11 @@
   .page-header {
     height: 90vh;
     padding-bottom: 5vh;
+
+    .info-icon {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
@@ -122,21 +115,20 @@
 @media (min-width: var.$lg) {
   .page-header {
     justify-content: space-evenly;
-  }
 
-  .lg-head {
-    display: flex;
-    flex-direction: column;
-
-    width: 600px;
+    .header-content {
+      .header-text {
+        .header-bar {
+          .circle {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
   }
 }
 
 // XL Breakpoint
-@media (min-width: var.$xl) {
-  .head {
-    p {
-      font-size: 2em;
-    }
-  }
-}
+// @media (min-width: var.$xl) {
+// }

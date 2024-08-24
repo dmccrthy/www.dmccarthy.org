@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 // Components
-import Layout from "@components/Layout";
+import Layout from "@components/Common/Layout";
 
 // Styles
 import "@styles/pages/404.scss";

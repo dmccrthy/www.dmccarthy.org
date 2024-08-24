@@ -115,10 +115,6 @@
   .about-text {
     width: 50vw;
 
-    p {
-      font-size: 18px;
-    }
-
     margin: 3vw;
   }
 
@@ -128,28 +124,14 @@
     padding: 0;
 
     img {
-      width: 35vw;
-      height: 35vw;
+      width: 30vw;
+      height: 30vw;
     }
   }
 }
 
 // Large Breakpoint
 @media screen and (min-width: var.$lg) {
-  .about-text {
-    p {
-      font-size: 22px;
-    }
-  }
-
-  .about-image {
-    width: 40vw;
-
-    img {
-      width: 30vw;
-      height: 30vw;
-    }
-  }
 }
 
 @media screen and (min-width: var.$xl) {

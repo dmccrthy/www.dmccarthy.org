@@ -3,9 +3,9 @@ import React from "react";
 import { Link } from "gatsby";
 
 // Components
-import DefaultHead from "@components/Head";
+import DefaultHead from "@components/Common/Head";
+import Layout from "@components/Common/Layout";
 import FetchMarkdown from "@hooks/graphql";
-import Layout from "../components/Layout";
 
 const BlogPage = () => {
   const posts = FetchMarkdown().allMarkdownRemark.edges;
@@ -21,7 +21,7 @@ const BlogPage = () => {
                 <Link to={"/posts/" + node.frontmatter.slug}>
                   <h3> {node.frontmatter.title}</h3>
                   <h4> {node.frontmatter.date} </h4>
-                  <p> {node.frontmatter.excerpt} </p>
+                  <p> {node.excerpt} </p>
                 </Link>
               </div>
             ))}
@@ -35,5 +35,5 @@ const BlogPage = () => {
 export default BlogPage;
 
 export const Head = () => (
-  <DefaultHead title={"Blog Posts | Dan McCarthy"} slug={"/posts/"} />
+  <DefaultHead title={"Blog Posts | Dan McCarthy"} slug={"posts/"} />
 );

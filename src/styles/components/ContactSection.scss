@@ -28,7 +28,7 @@
 
 .form-container {
   width: 90vw;
-  height: 35vh;
+  height: auto;
 
   border-radius: 1vh;
   padding: 5vw;
@@ -48,20 +48,20 @@
   textarea {
     margin-bottom: 1vh;
     width: 80vw;
-    height: 3vh;
   }
 
   .submit-button {
-    width: 50vw;
-    height: 3vh;
+    width: 40vw;
+    margin-top: 1vh;
   }
 }
 
 .account-links {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 
+  width: 100vw;
   margin: 3vh;
 }
 
@@ -69,36 +69,46 @@
   display: flex;
   align-items: center;
   height: 80px;
-  width: 250px;
   text-decoration: none;
 
-  img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  h1 {
-    font-size: 20px;
-    transition: 0.5s;
+  h3 {
+    display: none;
   }
 }
 
-.link-tag:hover {
-  h1 {
-    font-size: 22px;
+.filter-red:hover {
+  h3 {
+    color: var.$red;
   }
 
   .link-icon {
-    width: 55px;
-    height: 55px;
+    filter: var.$red-filter;
+  }
+}
+
+.filter-green:hover {
+  h3 {
+    color: var.$green;
+  }
+
+  .link-icon {
+    filter: var.$green-filter;
+  }
+}
+
+.filter-yellow:hover {
+  h3 {
+    color: var.$yellow;
+  }
+
+  .link-icon {
+    filter: var.$yellow-filter;
   }
 }
 
 .link-icon {
   width: 50px;
   height: 50px;
-  transition: 0.5s;
 
   margin: 10px;
 
@@ -116,16 +126,31 @@
   }
 
   .form-container {
-    width: 90vw;
-    height: 40vh;
-
     border-radius: 1vh;
     padding: 5vw;
+  }
+
+  .main-form {
+    h3,
+    input,
+    textarea {
+    }
   }
 }
 
 // Medium Breakpoint
 @media screen and (min-width: var.$md) {
+  .account-links {
+    flex-direction: column;
+
+    .link-tag {
+      width: 250px;
+
+      h3 {
+        display: flex;
+      }
+    }
+  }
 }
 
 // Large Breakpoint
@@ -140,11 +165,14 @@
   .contact-content {
     flex-direction: row;
     align-items: center;
+
+    .account-links {
+      width: auto;
+    }
   }
 
   .form-container {
     width: 60vw;
-    height: 50vh;
 
     margin: 5vw;
   }

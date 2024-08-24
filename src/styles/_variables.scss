@@ -12,6 +12,14 @@ $blue-alt: #076678;
 $purple: #b16286;
 $aqua: #689d6a;
 
+// Color Filters
+$red-filter: invert(35%) sepia(100%) saturate(7484%) hue-rotate(356deg)
+  brightness(85%) contrast(85%);
+$green-filter: invert(46%) sepia(89%) saturate(367%) hue-rotate(21deg)
+  brightness(101%) contrast(96%);
+$yellow-filter: invert(81%) sepia(15%) saturate(6846%) hue-rotate(349deg)
+  brightness(91%) contrast(84%);
+
 // Light Mode
 $bg-main-light: #f6f6f6;
 $bg-alt-light: #eceff1;

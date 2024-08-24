@@ -12,7 +12,6 @@ const AboutHeader = () => {
           "a Mentor",
           "a Programmer",
           "a Designer",
-          "an Artist",
         ]}
         typeSpeed={50}
         backSpeed={40}

@@ -7,11 +7,13 @@ export default function FetchMarkdown() {
       allMarkdownRemark {
         edges {
           node {
+            excerpt
+            timeToRead
             frontmatter {
               title
               slug
               date
-              excerpt
+              tags
             }
           }
         }
