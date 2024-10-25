@@ -2,7 +2,7 @@
 import React from "react";
 
 // Components
-import DefaultHead from "@components/Common/Head";
+import DefaultHead from "@components/Common/SEO";
 import Layout from "@components/Common/Layout";
 
 const ProjectPage = () => {

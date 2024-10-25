@@ -1,11 +1,17 @@
-@use "@styles/variables" as var;
-
 // Start at lowest breakpoint <576px
 .contact-wrapper {
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  @include var.themed() {
-    background-color: var.t("bg");
+  @include themed() {
+    background-color: t("bg");
+  }
+
+  h2 {
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -14,17 +20,12 @@
   justify-content: center;
   padding: 8vw;
 
-  @include var.themed() {
-    background-color: var.t("bg");
+  @include themed() {
+    background-color: t("bg");
   }
 }
 
-.contact-content {
-  display: flex;
-  // Puts link above form
-  flex-direction: column;
-  align-items: center;
-}
+
 
 .form-container {
   width: 90vw;
@@ -33,26 +34,8 @@
   border-radius: 1vh;
   padding: 5vw;
 
-  @include var.themed() {
-    background-color: var.t("alt");
-  }
-}
-
-.main-form {
-  display: flex;
-  flex-direction: column;
-  margin: 1vw;
-
-  h3,
-  input,
-  textarea {
-    margin-bottom: 1vh;
-    width: 80vw;
-  }
-
-  .submit-button {
-    width: 40vw;
-    margin-top: 1vh;
+  @include themed() {
+    background-color: t("alt");
   }
 }
 
@@ -60,8 +43,6 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
-  width: 100vw;
   margin: 3vh;
 }
 
@@ -76,70 +57,29 @@
   }
 }
 
-.filter-red:hover {
-  h3 {
-    color: var.$red;
-  }
-
-  .link-icon {
-    filter: var.$red-filter;
-  }
-}
-
-.filter-green:hover {
-  h3 {
-    color: var.$green;
-  }
-
-  .link-icon {
-    filter: var.$green-filter;
-  }
-}
-
-.filter-yellow:hover {
-  h3 {
-    color: var.$yellow;
-  }
-
-  .link-icon {
-    filter: var.$yellow-filter;
-  }
-}
-
 .link-icon {
   width: 50px;
   height: 50px;
 
   margin: 10px;
 
-  @include var.themed() {
-    filter: var.t("filter");
+  @include themed() {
+    filter: t("filter");
   }
 }
 
 // Small Breakpoint
-@media screen and (min-width: var.$sm) {
+@media (min-width: $sm) {
   .contact-header {
     display: flex;
     justify-content: center;
     padding: 8vw;
   }
 
-  .form-container {
-    border-radius: 1vh;
-    padding: 5vw;
-  }
-
-  .main-form {
-    h3,
-    input,
-    textarea {
-    }
-  }
 }
 
 // Medium Breakpoint
-@media screen and (min-width: var.$md) {
+@media (min-width: $md) {
   .account-links {
     flex-direction: column;
 
@@ -154,47 +94,14 @@
 }
 
 // Large Breakpoint
-@media screen and (min-width: var.$lg) {
-  .contact-header {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    padding-top: 4vw;
-  }
-
-  .contact-content {
+@media (min-width: $lg) {
+  .contact-wrapper {
     flex-direction: row;
-    align-items: center;
-
-    .account-links {
-      width: auto;
-    }
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   .form-container {
-    width: 60vw;
-
-    margin: 5vw;
+    width: 50vw;
   }
-
-  .main-form {
-    display: flex;
-    flex-direction: column;
-    margin: 1vw;
-
-    h3,
-    input,
-    textarea {
-      margin-bottom: 1vh;
-      width: 50vw;
-    }
-
-    .submit-button {
-      width: 20vw;
-    }
-  }
-}
-
-// Extre Large Breakpoint
-@media screen and (min-width: var.$xl) {
 }

@@ -7,7 +7,7 @@ import { useCallback, useState, useEffect } from "react";
  */
 const useTheme = () => {
   const item = "dmccarthy-theme";
-  let [theme, setTheme] = useState("light");
+  let [theme, setTheme] = useState("dark");
 
   const toggleTheme = useCallback(() => {
     if (theme === "light") {

@@ -1,14 +1,11 @@
-@use "@styles/variables" as var;
-
+// All footer specific styling
 .footer-wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
 
-  width: 100vw;
-  color: #ffffff;
-
-  @include var.themed() {
-    background-color: var.t("alt");
+  @include themed() {
+    background-color: t("alt");
   }
 }
 
@@ -18,19 +15,15 @@
   align-items: center;
   height: 5vw;
   min-height: 75px;
-  margin-right: 1vw;
-
-  p {
-    margin-right: 1vw;
-  }
 
   a {
-    transition: 1s;
+    margin-left: 6px;
+    text-decoration: underline;
   }
 
   a:hover {
     position: relative;
-    background: var.$gradient;
+    background: $gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -39,7 +32,5 @@
 .gradient-bar {
   width: 100vw;
   height: 1vh;
-  z-index: 2;
-
-  background: var.$gradient;
+  background: $gradient;
 }

@@ -1,0 +1,21 @@
+// Sass Functions
+@use "sass:map";
+
+// General
+@import "@styles/variables.scss";
+@import "@styles/global.scss";
+@import "@styles/components/PageHeader.scss";
+
+// Components
+@import "@styles/components/AboutMe.scss";
+@import "@styles/components/ContactSection.scss";
+@import "@styles/components/Footer.scss";
+@import "@styles/components/Navbar.scss";
+@import "@styles/components/PageHeader.scss";
+
+// Pages
+@import "@styles/pages/404.scss";
+@import "@styles/pages/PostsPage.scss";
+@import "@styles/pages/ResumePage.scss";
+
+

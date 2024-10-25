@@ -1,12 +1,9 @@
 import React from "react";
 
 // Components
-import DefaultHead from "@components/Common/Head";
+import DefaultHead from "@components/Common/SEO";
 import Layout from "@components/Common/Layout";
 import ResumeItem from "@components/ResumePage/ResumeItem";
-
-// Styles
-import "@styles/pages/ResumePage.scss";
 
 // Images
 import unh from "@img/resume/UNH.png";
@@ -15,9 +12,9 @@ import iol from "@img/resume/IOL.png";
 const ResumePage = () => {
   return (
     <Layout>
-      <div className="page-container">
+      <main className="page-container">
         <h2>My Resume:</h2>
-        <div className="resume-section">
+        <section className="resume-section">
           <h3>Education:</h3>
           <ResumeItem
             image={unh}
@@ -25,8 +22,8 @@ const ResumePage = () => {
             subtitle="September 2024 - May 2028 | B.S. in Computer Science"
             // content="Currently studying computer science at UNH. "
           />
-        </div>
-        <div className="resume-section">
+        </section>
+        <section className="resume-section">
           <h3>Experience:</h3>
           <ResumeItem
             image={iol}
@@ -34,7 +31,7 @@ const ResumePage = () => {
             subtitle="July 2023 - Present | UNH InterOperability Lab, Durham, NH"
             // content="Currently studying computer science at UNH. "
           />
-        </div>
+        </section>
         {/* <div className="resume-section">
           <h1>Certificates:</h1>
           <ResumeItem
@@ -46,7 +43,7 @@ const ResumePage = () => {
         <div className="resume-section">
           <h1>Skills:</h1>
         </div> */}
-      </div>
+      </main>
     </Layout>
   );
 };

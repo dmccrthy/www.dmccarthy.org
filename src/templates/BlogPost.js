@@ -3,7 +3,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 // Components
-import DefaultHead from "@components/Common/Head";
+import DefaultHead from "@components/Common/SEO";
 import Layout from "@components/Common/Layout";
 
 // Styles

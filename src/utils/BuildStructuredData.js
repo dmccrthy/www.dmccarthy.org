@@ -1,31 +1,41 @@
-// Packages
-import React from "react";
-import { Helmet } from "react-helmet";
-
-// Images
-import favicon from "@img/favicon.png";
 import headshot from "@img/headshot.jpg";
 
-const DefaultHead = ({ title, slug, type, date, excerpt, tags, image }) => {
+/**
+ * Build page data in to JSON-LD Structured Data
+ * @param {String} title Page title
+ * @param {String} url
+ * @param {String} type
+ * @param {String} date
+ * @param {String} excerpt
+ * @param {String} tags
+ * @param {String} image
+ * @return {Object} JSON-LD Structured Data
+ */
+export default function BuildStructuredData(
+  title,
+  url,
+  type,
+  date,
+  excerpt,
+  tags,
+  image
+) {
+  // Define root URL
   const mainPage = "https://www.dmccarthy.org";
-  const root = "https://www.dmccarthy.org/";
 
-  // Create URL from slug
-  const url = slug === "" ? mainPage : `${root}${slug}`;
-
-  // Create Structured Data
-  const schema = {
+  // Return Structured Data to React Helmet
+  return {
     "@context": "https://schema.org",
     "@graph": [
       {
-        // Main person struct
+        // Person data for use with @author
         "@type": "Person",
-        "@id": `${root}#person`,
+        "@id": `${mainPage}#person`,
         name: "Dan McCarthy",
         image: {
           "@type": "ImageObject",
-          "@id": `${root}#personImage`,
-          url: `https://www.dmccarthy.org${headshot}`,
+          "@id": `${mainPage}#personImage`,
+          url: `${mainPage}${headshot}`,
           caption: "Dan McCarthy",
         },
         description:
@@ -38,7 +48,7 @@ const DefaultHead = ({ title, slug, type, date, excerpt, tags, image }) => {
       {
         // Root website structure
         "@type": "WebSite",
-        "@id": `${root}#website`,
+        "@id": `${mainPage}#website`,
         url: mainPage,
         name: "Dan McCarthy",
       },
@@ -46,10 +56,10 @@ const DefaultHead = ({ title, slug, type, date, excerpt, tags, image }) => {
         // Individual webpage
         "@type": "WebPage",
         "@id": `${url}#webpage`,
-        url: slug === "" ? mainPage : url,
+        url: url,
         inLanguage: "en-US",
         name: title,
-        isPartOf: { "@id": `${root}#website` },
+        isPartOf: { "@id": `${mainPage}#website` },
         image: {
           "@type": "ImageObject",
           "@id": `${url}#primaryImage`,
@@ -69,7 +79,7 @@ const DefaultHead = ({ title, slug, type, date, excerpt, tags, image }) => {
             "@id": `${url}#article`,
             isPartOf: { "@id": `${url}#webpage` },
             author: {
-              "@id": `${root}#person`,
+              "@id": `${mainPage}#person`,
             },
             headline: title,
             datePublished: date,
@@ -80,34 +90,4 @@ const DefaultHead = ({ title, slug, type, date, excerpt, tags, image }) => {
         : {},
     ],
   };
-
-  return (
-    <Helmet>
-      {/* HTML Meta */}
-      <title>{title}</title>
-      <meta name="author" content="Dan McCarthy" />
-      <meta name="description" content={excerpt} />
-      <meta
-        name="keywords"
-        content={
-          "Dan McCarthy, dmccarthy, McCarthy, Daniel McCarthy, dmccarthy.org" +
-          tags
-        }
-      />
-      <link rel="canonical" href={url} />
-      <link id="icon" rel="icon" href={favicon} />
-
-      {/* Open Graph Meta */}
-      <meta property="og:title" content={title} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content="" />
-      <meta property="og:type" content={type} />
-      <meta property="og:description" content={excerpt} />
-
-      {/* Google Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(schema)}</script>
-    </Helmet>
-  );
-};
-
-export default DefaultHead;
+}

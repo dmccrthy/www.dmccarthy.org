@@ -1,21 +1,13 @@
-// Packages
 import React from "react";
 import { ReactTyped } from "react-typed";
-
-// Styles
-import "@styles/components/PageHeader.scss";
-
-// images
-import briefcase from "@img/icons/briefcase.svg";
-import pin from "@img/icons/marker.svg";
-import arrow from "@img/icons/arrow.svg";
+import { motion } from "framer-motion";
 
 const PageHeader = () => {
   // Scroll Page on click
   function scrollPage() {
     const element = document.getElementById("scroll");
 
-    element.scrollIntoView({ behavior: "smooth" });
+    element.scrollIntoView(true, { behavior: "smooth" });
   }
 
   return (
@@ -47,7 +39,7 @@ const PageHeader = () => {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="info-icon"
+              className="theme-icon"
             >
               <path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3" />
               <circle cx="12" cy="10" r="3" />
@@ -66,7 +58,7 @@ const PageHeader = () => {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="info-icon"
+              className="theme-icon"
             >
               <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
               <circle cx="12" cy="10" r="3" />
@@ -74,22 +66,31 @@ const PageHeader = () => {
             <h3>New Hampshire</h3>
           </div>
         </div>
-      </div>
-      <div onClick={scrollPage} id="scroll" className="arrow-container">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#000000"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          className="info-icon"
+        <motion.div
+          whileHover={{ y: 10 }}
+          transition={{
+            ease: "easeIn",
+            duration: 0.25,
+          }}
+          onClick={scrollPage}
+          id="scroll"
+          className="arrow-container"
         >
-          <path d="M12 5v13M5 12l7 7 7-7" />
-        </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            className="theme-icon"
+          >
+            <path d="M12 5v13M5 12l7 7 7-7" />
+          </svg>
+        </motion.div>
       </div>
     </div>
   );

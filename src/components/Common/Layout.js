@@ -3,11 +3,11 @@ import React, { useEffect } from "react";
 
 // Components
 import useTheme from "@hooks/useTheme";
-import Navbar from "@components/Common/Navbar";
+import Navbar from "@components/Common/Nav/Navbar";
 import Footer from "@components/Common/Footer";
 
 // Styles
-import "@styles/global.scss";
+import "@styles/index.scss";
 
 /**
  *  A wrapper for site pages including Navbar and Footer
@@ -33,11 +33,11 @@ const Layout = ({ children }) => {
   }, [theme]);
 
   return (
-    <div>
+    <>
       <Navbar theme={theme} toggle={toggleTheme} />
       <>{children}</>
       <Footer />
-    </div>
+    </>
   );
 };
 
