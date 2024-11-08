@@ -15,7 +15,7 @@ const NotFoundPage = () => {
           Sorry 😔, the page you're looking for may have been removed, or had
           its name changed.
         </p>
-        <motion.button className="button">
+        <motion.button className="button-aqua" whileHover={{ y: 5 }}>
           <Link to="/">Return Home</Link>
         </motion.button>
       </main>

@@ -1,51 +1,33 @@
-@use "@styles/variables" as var;
-
-// Start at lowest breakpoint <576px
-.about-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  overflow: hidden;
-  @include var.themed() {
-    background-color: var.t("alt");
-  }
-}
-.about-header {
-  width: 100vw;
-  text-align: center;
-}
-
 .about-content {
+  width: 50vw;
+  margin: 3vw;
   h3 {
-    line-height: 1vw;
+    line-height: 200%;
   }
 }
 
 .about-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 50vw;
+  border-radius: 10%;
   overflow: hidden;
-  padding: 10vw;
-
-  img {
-    width: 50vw;
-    height: 50vw;
-    border-radius: 10%;
-    overflow: hidden;
-    margin: 0;
-    transition: 0.5s;
-    @include var.themed() {
-      background-color: var.t("bg");
-      border: 6px solid var.t("bg");
-    }
+  margin: 0;
+  transition: 0.5s;
+  
+  @include themed() {
+    border: 6px solid t("bg");
   }
 
-  img:hover {
-    box-shadow: 10px 10px var.$purple, -10px -10px var.$aqua;
+  @media (min-width: $lg) {
+    width: 25vw;
   }
+
+  @media (min-width: $xl) {
+    width: 300px;
+  }
+}
+
+.about-image:hover {
+  box-shadow: 10px 10px $purple, -10px -10px $aqua;
 }
 
 // .resume-link {
@@ -57,68 +39,13 @@
 //   }
 // }
 
-// Small Breakpoint
-@media screen and (min-width: var.$sm) {
-  .about-image {
-    padding: 5vw;
-
-    img {
-      width: 40vw;
-      height: 40vw;
-    }
-  }
-}
-
-// Medium Breakpoint
-@media screen and (min-width: var.$md) {
-  .about-container {
-    flex-wrap: wrap-reverse;
-  }
-
-  .about-content {
-    width: 50vw;
-
-    margin: 3vw;
-  }
-
-  .about-image {
-    height: 50vw;
-    width: 50vw;
-    padding: 0;
-
-    img {
-      width: 30vw;
-      height: 30vw;
-    }
-  }
-}
-
-// Large Breakpoint
-@media screen and (min-width: var.$lg) {
-}
-
-@media screen and (min-width: var.$xl) {
-  .about {
-    flex-direction: row;
-
-    padding: 15px;
-  }
-
+@media (min-width: $xl) {
   .about-content {
     width: 500px;
     margin: 50px;
 
     h1 {
       margin-bottom: 20px;
-    }
-  }
-
-  .about-image {
-    width: 500px;
-
-    img {
-      width: 350px;
-      height: 350px;
     }
   }
 }

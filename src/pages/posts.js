@@ -12,7 +12,7 @@ const BlogPage = () => {
 
   return (
     <Layout>
-      <div>
+      <div className="main-bg" style={{ minHeight: "100vh", padding: "10vh" }}>
         <div>
           <div>
             <h2 style={{ marginBottom: "10px" }}>Posts:</h2>

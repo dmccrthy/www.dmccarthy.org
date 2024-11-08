@@ -12,7 +12,7 @@ import iol from "@img/resume/IOL.png";
 const ResumePage = () => {
   return (
     <Layout>
-      <main className="page-container">
+      <main className="container main-bg" style={{ paddingTop: "10vh" }}>
         <h2>My Resume:</h2>
         <section className="resume-section">
           <h3>Education:</h3>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 
 import { motion, AnimatePresence } from "framer-motion";
+import burger from "@img/icons/hamburger.svg";
 
 const MobileNav = () => {
   // Mobile Nav Menu State
@@ -35,7 +36,9 @@ const MobileNav = () => {
         className="nav-button"
         onClick={navClick}
         aria-label="Mobile Nav Button"
-      />
+      >
+        <img src={burger} alt="" />
+      </button>
     </>
   );
 };

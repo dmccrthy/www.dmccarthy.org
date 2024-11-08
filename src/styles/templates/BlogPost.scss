@@ -1,8 +1,7 @@
-@use "@styles/variables" as var;
-
 .article-wrapper {
   min-height: 100vh;
-  @include var.themed() {
-    background-color: var.t("bg");
-  }
+  padding: 10vh;
+  // @include themed() {
+  //   background-color: t("bg");
+  // }
 }

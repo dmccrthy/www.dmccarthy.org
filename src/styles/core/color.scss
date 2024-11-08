@@ -1,0 +1,32 @@
+// Generate color classes
+@each $color, $value in $colors {
+  .#{$color} {
+    color: $value;
+    filter: $value
+  }
+
+  .#{$color}-hover:hover {
+    color: $value;
+    filter: $value
+  }
+
+  .#{$color}-bg {
+    background-color: $value;
+  }
+}
+
+// These bg are generated manually due to the way themes are setup;
+// these classes will automatically update to the main/alt of the current theme
+.main-bg {
+  @include themed() {
+    background-color: t("bg");
+  }
+}
+
+.alt-bg {
+  @include themed() {
+    background-color: t("alt");
+  }
+}
+
+

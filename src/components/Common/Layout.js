@@ -15,6 +15,9 @@ import "@styles/index.scss";
  * @returns {Object} The layout wrapper used in each webpage
  */
 const Layout = ({ children }) => {
+  // Set document html lang
+  document.documentElement.lang = "en";
+
   // Light/Dark Theme updating
   const [theme, toggleTheme] = useTheme();
 

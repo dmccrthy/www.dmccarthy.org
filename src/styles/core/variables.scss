@@ -24,11 +24,11 @@ $red: #cc241d;
 $green: #98971a;
 $yellow: #d79921;
 $blue: #458588;
-$blue-alt: #076678;
+// $blue-alt: #076678;
 $purple: #b16286;
 $aqua: #689d6a;
 
-$colors: ("red": $red, "green": $green, "yellow": $yellow, "blue-1": $blue, "blue-2": $blue-alt, "purple": $purple, "aqua": $aqua);
+$colors: ("red": $red, "green": $green, "yellow": $yellow, "blue": $blue, "purple": $purple, "aqua": $aqua);
 
 $gradient: linear-gradient(
   90deg,
@@ -46,6 +46,8 @@ $bg-alt-light: #eceff1;
 $bg-accent-light: #303030;
 $text-light: #323235;
 $scheme-light: light;
+// Filter to text color
+$filter-light: invert(17%) sepia(8%) saturate(319%) hue-rotate(202deg) brightness(93%) contrast(90%);
 
 // Dark Mode
 $bg-main-dark: #1d2021;
@@ -53,6 +55,8 @@ $bg-alt-dark: #161819;
 $bg-accent-dark: #303030;
 $text-dark: #ffffff;
 $scheme-dark: dark;
+// Filter to text color
+$filter-dark: invert(98%) sepia(99%) saturate(5%) hue-rotate(6deg) brightness(103%) contrast(100%);
 
 // Themes
 $themes: (
@@ -62,6 +66,7 @@ $themes: (
     accent: $bg-accent-light,
     text: $text-light,
     scheme: $scheme-light,
+    filter: $filter-light,
   ),
   dark: (
     bg: $bg-main-dark,
@@ -69,6 +74,7 @@ $themes: (
     accent: $bg-accent-dark,
     text: $text-dark,
     scheme: $scheme-dark,
+    filter: $filter-dark,
   ),
 );
 
@@ -92,6 +98,7 @@ $themes: (
   }
 }
 
+// Get value from current theme map
 @function t($key) {
   @return map-get($theme-map, $key);
 }

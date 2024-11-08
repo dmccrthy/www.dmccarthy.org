@@ -1,18 +1,18 @@
 <table align="center">
     <tr>
         <th>
-            <img src="src/img/fav.png" height="60">           
+            <img src="src/img/favicon.png" height="60">           
         </th>
         <th>
             <h1>
-                Dan McCarthy
+                www.dmccarthy.org
             </h1>
         </th>
     </tr>
     
 </table>
 
-## 📝 License
+## 🗒️ License
 
 This Website is provided under the GPL-3 license. Feel free to use it as inspiration for your own website.
 

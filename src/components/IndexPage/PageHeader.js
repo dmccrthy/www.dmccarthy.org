@@ -1,6 +1,10 @@
 import React from "react";
-import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
+import { AnimateText } from "@components/Common/AnimateText";
+
+import person from "@img/icons/person.svg";
+import pin from "@img/icons/pin.svg";
+import arrow from "@img/icons/arrow.svg";
 
 const PageHeader = () => {
   // Scroll Page on click
@@ -11,58 +15,33 @@ const PageHeader = () => {
   }
 
   return (
-    <div className="page-header">
+    <div className="page-header main-bg">
       <div>
         <div className="header-text">
           <p>Hi, I'm</p>
-          <h1>
-            <ReactTyped strings={["Dan McCarthy"]} typeSpeed={90} />
-          </h1>
-          {/* TODO: Find a better way to do this */}
+          <AnimateText classes={["h1"]} text="Dan McCarthy">
+            Dan McCarthy
+          </AnimateText>
+          {/* <ReactTyped
+            className="h1"
+            strings={["Dan McCarthy"]}
+            typeSpeed={90}
+          /> */}
           <div className="header-bar">
-            <div className="circle red" />
-            <div className="circle green" />
-            <div className="circle yellow" />
-            <div className="circle blue" />
+            <span className="circle red-bg" />
+            <span className="circle green-bg" />
+            <span className="circle yellow-bg" />
+            <span className="circle blue-bg" />
           </div>
         </div>
         {/* TODO: Move info row to component */}
         <div className="info-container">
           <div className="info-row">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#000000"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="theme-icon"
-            >
-              <path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3" />
-              <circle cx="12" cy="10" r="3" />
-              <circle cx="12" cy="12" r="10" />
-            </svg>
+            <img className="icon theme-icon" src={person} alt="" />
             <h3>Software Developer</h3>
           </div>
           <div className="info-row">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#000000"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="theme-icon"
-            >
-              <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
+            <img className="icon theme-icon" src={pin} alt="" />
             <h3>New Hampshire</h3>
           </div>
         </div>
@@ -76,20 +55,7 @@ const PageHeader = () => {
           id="scroll"
           className="arrow-container"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#000000"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="theme-icon"
-          >
-            <path d="M12 5v13M5 12l7 7 7-7" />
-          </svg>
+          <img className="icon theme-icon" src={arrow} alt="" />
         </motion.div>
       </div>
     </div>

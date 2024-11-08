@@ -25,7 +25,7 @@ const BlogPost = ({ data, pageContext }) => {
         tags={tags}
         image={""}
       />
-      <div className="article-wrapper">
+      <div className="article-wrapper main-bg">
         <h2>{title}</h2>
         <h3>{`By: Dan McCarthy | ${date}`}</h3>
         <article

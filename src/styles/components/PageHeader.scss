@@ -1,5 +1,3 @@
-@use "@styles/variables" as var;
-
 // Start at lowest breakpoint <576px
 .page-header {
   display: flex;
@@ -10,10 +8,6 @@
   width: 100vw;
 
   min-height: fit-content;
-
-  @include var.themed() {
-    background-color: var.t("bg");
-  }
 
   .header-text {
     display: flex;
@@ -41,26 +35,9 @@
     width: 100%;
 
     .circle {
-      background-color: black;
       width: 14px;
       height: 14px;
       border-radius: 100%;
-    }
-
-    .red {
-      background-color: var.$red;
-    }
-
-    .green {
-      background-color: var.$green;
-    }
-
-    .yellow {
-      background-color: var.$yellow;
-    }
-
-    .blue {
-      background-color: var.$blue;
     }
   }
 
@@ -86,8 +63,8 @@
     width: 25px;
     margin: 0 10px 4px 0;
 
-    @include var.themed() {
-      stroke: var.t("text");
+    @include themed() {
+      stroke: t("text");
     }
   }
 
@@ -105,10 +82,8 @@
 }
 
 // Medium Breakpoint
-@media (min-width: var.$md) {
+@media (min-width: $md) {
   .page-header {
-    height: 90vh;
-    padding-bottom: 5vh;
 
     .theme-icon {
       width: 30px;
@@ -118,7 +93,7 @@
 }
 
 // Large Breakpoint
-@media (min-width: var.$lg) {
+@media (min-width: $lg) {
   .page-header {
     justify-content: space-evenly;
 

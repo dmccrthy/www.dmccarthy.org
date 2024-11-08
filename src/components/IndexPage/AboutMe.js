@@ -1,22 +1,23 @@
 import React from "react";
 import { Link } from "gatsby";
 import { ReactTyped } from "react-typed";
+import { AnimateText } from "@components/Common/AnimateText";
 
 // Images
 import headshot from "@img/headshot.jpg";
 
 const AboutMe = () => {
   return (
-    <section className="about-container">
+    <section className="container alt-bg">
       {/* id "scroll" is for scroll button */}
-      <h2 className="about-header" id="scroll">
-        About Me:
-      </h2>
-      <div className="about-image">
-        <img src={headshot} />
-      </div>
+      <AnimateText classes={["h2", "header"]} text="About Me:" />
+      <img
+        className="about-image"
+        src={headshot}
+        alt="Picture of Dan McCarthy"
+      />
       <div className="about-content">
-        <h3>
+        <h3 id="scroll">
           I'm{" "}
           <ReactTyped
             strings={[
@@ -34,10 +35,10 @@ const AboutMe = () => {
         </h3>
         <p>
           Hi again! My name is Dan and I'm a Computer Science student interested
-          in all things software development. I’m currently working towards a BS
-          in Computer Science at the University of New Hampshire and in my free
-          time I like to work on different projects usually in Python or
-          Javascript.
+          in all things software development, and cybersecurity. I’m currently
+          working towards a BS in Computer Science at the University of New
+          Hampshire and in my free time I like to work on different projects in
+          a number of different languages which you can find on my github.
         </p>
       </div>
 

@@ -15,8 +15,9 @@ const ProjectPage = () => {
           alignItems: "center",
           height: "90vh",
         }}
+        className="main-bg"
       >
-        <h2>I'm Working on it...</h2>
+        <h2>Under Construction...</h2>
       </div>
     </Layout>
   );

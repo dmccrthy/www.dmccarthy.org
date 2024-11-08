@@ -1,42 +1,9 @@
-// Start at lowest breakpoint <576px
-.contact-wrapper {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include themed() {
-    background-color: t("bg");
-  }
-
-  h2 {
-    text-align: center;
-    width: 100%;
-  }
-}
-
-.contact-header {
-  display: flex;
-  justify-content: center;
-  padding: 8vw;
-
-  @include themed() {
-    background-color: t("bg");
-  }
-}
-
-
-
-.form-container {
+.contact-content {
   width: 90vw;
   height: auto;
 
   border-radius: 1vh;
   padding: 5vw;
-
-  @include themed() {
-    background-color: t("alt");
-  }
 }
 
 .account-links {
@@ -58,24 +25,10 @@
 }
 
 .link-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 
   margin: 10px;
-
-  @include themed() {
-    filter: t("filter");
-  }
-}
-
-// Small Breakpoint
-@media (min-width: $sm) {
-  .contact-header {
-    display: flex;
-    justify-content: center;
-    padding: 8vw;
-  }
-
 }
 
 // Medium Breakpoint
@@ -95,13 +48,8 @@
 
 // Large Breakpoint
 @media (min-width: $lg) {
-  .contact-wrapper {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
 
-  .form-container {
+  .contact-content {
     width: 50vw;
   }
 }
