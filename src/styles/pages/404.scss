@@ -1,27 +1,15 @@
-@use "@styles/variables" as var;
-
 .error-style {
-  margin: 10vw;
+  display: flex;
+  flex-direction: column;
 
-  h1 {
-    font-size: 80px;
-  }
-
-  h2 {
-    font-size: 40px;
-  }
+  height: 90vh;
+  padding: 10vw;
 
   p {
-    margin: 50px 0 50px 0;
+    margin-bottom: 5vh;
   }
 
-  button {
-    background-color: var.$bg-accent;
-    width: 200px;
-    height: 40px;
-
-    a {
-      text-decoration: none;
-    }
+  @include themed() {
+    background-color: t("bg");
   }
 }

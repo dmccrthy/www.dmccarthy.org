@@ -1,13 +1,12 @@
-@use "@styles/variables" as var;
-
+// All footer specific styling
 .footer-wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
 
-  width: 100vw;
-
-  background-color: var.$bg-alt;
-  color: #ffffff;
+  @include themed() {
+    background-color: t("alt");
+  }
 }
 
 .footer-item {
@@ -16,50 +15,22 @@
   align-items: center;
   height: 5vw;
   min-height: 75px;
-  margin-right: 1vw;
-
-  p {
-    margin-right: 1vw;
-  }
 
   a {
-    color: #ffffff;
-    transition: 1s;
+    margin-left: 6px;
+    text-decoration: underline;
   }
 
   a:hover {
     position: relative;
-    background: var.$gradient;
+    background: $gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-
-  img {
-    display: none;
-    margin-right: auto;
-    margin-left: 2vw;
-
-    max-width: 4vw;
-    min-width: 50px;
-    filter: invert(7%) sepia(6%) saturate(1023%) hue-rotate(149deg)
-      brightness(103%) contrast(87%);
   }
 }
 
 .gradient-bar {
   width: 100vw;
   height: 1vh;
-  z-index: 2;
-
-  background: var.$gradient;
-}
-
-@media screen and (min-width: var.$sm) {
-  .footer-item {
-    justify-content: start;
-
-    img {
-      display: inline;
-    }
-  }
+  background: $gradient;
 }

@@ -1,23 +1,25 @@
-// Packages
 import React from "react";
 import { Link } from "gatsby";
+import { motion } from "framer-motion";
 
-// Styles
-import "@styles/pages/404.scss";
+// Components
+import Layout from "@components/Common/Layout";
 
 const NotFoundPage = () => {
   return (
-    <main className="error-style">
-      <h1>404</h1>
-      <h2>Page Not Found</h2>
-      <p>
-        Sorry 😔, the page you're looking for may have been removed, or had its
-        name changed.
-      </p>
-      <button>
-        <Link to="/">Return Home</Link>
-      </button>
-    </main>
+    <Layout>
+      <main className="error-style">
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>
+          Sorry 😔, the page you're looking for may have been removed, or had
+          its name changed.
+        </p>
+        <motion.button className="button-aqua" whileHover={{ y: 5 }}>
+          <Link to="/">Return Home</Link>
+        </motion.button>
+      </main>
+    </Layout>
   );
 };
 

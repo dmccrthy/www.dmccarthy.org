@@ -48,7 +48,6 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap",
     },
     `gatsby-plugin-fix-fouc`,
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
   ],
 };

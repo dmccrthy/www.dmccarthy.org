@@ -1,13 +1,13 @@
+// Packages
 import React from "react";
 
-import DefaultHead from "@components/SEO";
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
+// Components
+import DefaultHead from "@components/Common/SEO";
+import Layout from "@components/Common/Layout";
 
 const ProjectPage = () => {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <div
         style={{
           display: "flex",
@@ -15,14 +15,16 @@ const ProjectPage = () => {
           alignItems: "center",
           height: "90vh",
         }}
+        className="main-bg"
       >
-        <h1>I'm Working on it...</h1>
+        <h2>Under Construction...</h2>
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 };
 
 export default ProjectPage;
 
-export const Head = () => <DefaultHead title={"Projects | Dan McCarthy"} />;
+export const Head = () => (
+  <DefaultHead title={"Projects | Dan McCarthy"} slug="projects/" />
+);

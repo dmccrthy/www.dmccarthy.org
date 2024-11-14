@@ -1,88 +1,39 @@
 // Packages
 import React from "react";
-import styled from "styled-components";
 import { Link } from "gatsby";
 
 // Components
-import DefaultHead from "@components/SEO";
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
-import FetchMarkdown from "@src/hooks/graphql";
-
-const PageContainer = styled.div`
-  display: flex;
-  width: 100vw;
-  background-color: #1d2021;
-`;
-
-const PostList = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 45vw;
-  height: auto;
-  min-height: 90vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-
-  h2 {
-    margin-left: 1vw;
-    margin-top: 10vh;
-  }
-
-  hr {
-    width: 15vw;
-    margin-bottom: 1vw;
-  }
-`;
-
-const PostCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 20vh;
-  border-radius: 1vw;
-  padding: 2vw;
-  margin-bottom: 1vh;
-  background-color: #111111;
-
-  a {
-    text-decoration: none;
-
-    h2 {
-      text-decoration: underline;
-    }
-  }
-`;
+import DefaultHead from "@components/Common/SEO";
+import Layout from "@components/Common/Layout";
+import FetchMarkdown from "@hooks/graphql";
 
 const BlogPage = () => {
   const posts = FetchMarkdown().allMarkdownRemark.edges;
 
   return (
-    <>
-      <Navbar />
-      <div>
-        <PageContainer>
-          <PostList>
+    <Layout>
+      <div className="main-bg" style={{ minHeight: "100vh", padding: "10vh" }}>
+        <div>
+          <div>
             <h2 style={{ marginBottom: "10px" }}>Posts:</h2>
             {posts.map(({ node }) => (
-              <PostCard>
+              <div>
                 <Link to={"/posts/" + node.frontmatter.slug}>
                   <h3> {node.frontmatter.title}</h3>
                   <h4> {node.frontmatter.date} </h4>
-                  <p> {node.frontmatter.excerpt} </p>
+                  <p> {node.excerpt} </p>
                 </Link>
-              </PostCard>
+              </div>
             ))}
-          </PostList>
-        </PageContainer>
+          </div>
+        </div>
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 };
 
 export default BlogPage;
 
 export const Head = () => (
-  <DefaultHead title={"Blog Posts | Dan McCarthy"} slug={"/posts/"} />
+  <DefaultHead title={"Blog Posts | Dan McCarthy"} slug={"posts/"} />
 );

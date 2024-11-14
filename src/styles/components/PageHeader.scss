@@ -1,161 +1,115 @@
-@use "@styles/variables" as var;
-
 // Start at lowest breakpoint <576px
 .page-header {
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
 
-  background-color: var.$bg-main;
-  background-image: url("@img/backing.png");
-  background-size: cover;
-  overflow: hidden;
-
   height: 100vh;
   width: 100vw;
-}
 
-.head {
-  p {
-    font-size: 15px;
+  min-height: fit-content;
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      letter-spacing: 2px;
+      line-height: 170%;
+
+      // Fixs weird transition on theme change
+      span {
+        transition: 0s;
+      }
+    }
+
+    p {
+      font-size: calc(1rem + 0.4vw);
+    }
   }
 
-  h1,
-  p {
-    text-shadow: 2px 2px var.$bg-main;
+  .header-bar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .circle {
+      width: 14px;
+      height: 14px;
+      border-radius: 100%;
+    }
   }
 
-  hr {
-    background: var.$gradient;
-    border: 0;
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    height: 5px;
-    width: 290px;
+    .info-row {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      transition: 0.5s;
+    }
+
+    // .info-row:hover {
+    //   margin-top: 40px;
+    // }
   }
-}
 
-.socials {
-  // Base Icon Styles
-  img {
+  .theme-icon {
     height: 25px;
     width: 25px;
-    margin: 8px;
+    margin: 0 10px 4px 0;
 
-    filter: invert(100%) sepia(0%) saturate(7441%) hue-rotate(152deg)
-      brightness(114%) contrast(103%);
-    transition: 0.5s, filter 0s;
-  }
-
-  img:hover {
-    transform: scale(1.05);
-  }
-
-  // Add icon specific coloring
-  .linkedin:hover {
-    filter: invert(15%) sepia(96%) saturate(4352%) hue-rotate(356deg)
-      brightness(86%) contrast(84%);
-  }
-
-  .git:hover {
-    filter: invert(57%) sepia(20%) saturate(1594%) hue-rotate(21deg)
-      brightness(96%) contrast(85%);
-  }
-}
-
-// No photo until $lg breakpoint
-.photo-container {
-  display: none;
-}
-
-// Small Breakpoint
-@media (min-width: var.$sm) {
-  .head {
-    p {
-      font-size: 25px;
-    }
-
-    hr {
-      height: 8px;
-      width: 500px;
+    @include themed() {
+      stroke: t("text");
     }
   }
 
-  .socials {
-    img {
-      height: 30px;
-      width: 30px;
-    }
+  .arrow-container {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    top: 75px;
+  }
+
+  .arrow-container:hover {
+    cursor: pointer;
   }
 }
 
 // Medium Breakpoint
-@media (min-width: var.$md) {
+@media (min-width: $md) {
   .page-header {
-    height: 90vh;
-    padding-bottom: 5vh;
+
+    .theme-icon {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
 // Large Breakpoint
-@media (min-width: var.$lg) {
+@media (min-width: $lg) {
   .page-header {
     justify-content: space-evenly;
-  }
 
-  .lg-head {
-    display: flex;
-    flex-direction: column;
-
-    width: 600px;
-  }
-
-  .photo-container {
-    display: flex;
-    justify-content: center;
-    width: 300px;
-
-    img {
-      width: 300px;
-      height: 300px;
-      border: 6px solid #f8f8f8;
-      border-radius: 50px;
-      transition: 0.5s;
-    }
-
-    img:hover {
-      box-shadow: 10px 10px var.$purple, -10px -10px var.$aqua;
+    .header-content {
+      .header-text {
+        .header-bar {
+          .circle {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
     }
   }
 }
 
 // XL Breakpoint
-@media (min-width: var.$xl) {
-  .head {
-    p {
-      font-size: 2em;
-    }
-
-    hr {
-      height: 12px;
-      width: 575px;
-    }
-  }
-
-  .socials {
-    img {
-      height: 35px;
-      width: 35px;
-      margin: 15px;
-    }
-  }
-
-  .photo-container {
-    width: 350px;
-
-    img {
-      width: 350px;
-      height: 350px;
-    }
-  }
-}
+// @media (min-width: var.$xl) {
+// }

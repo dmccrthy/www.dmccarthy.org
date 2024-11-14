@@ -18,8 +18,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@fontsource/karla": "^5.0.18",
-    "@fontsource/montserrat": "^5.0.16",
+    "@fontsource/inter": "^5.0.19",
+    "framer-motion": "^11.9.0",
     "gatsby": "^5.0.0",
     "gatsby-plugin-fix-fouc": "^1.0.5",
     "gatsby-plugin-manifest": "^5.13.0",
@@ -32,9 +32,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-intersection-observer": "^9.13.1",
     "react-typed": "^2.0.12",
-    "sass": "^1.77.4",
-    "styled-components": "^6.1.1"
+    "sass": "^1.77.4"
   },
   "devDependencies": {
     "gh-pages": "^6.1.0"

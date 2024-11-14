@@ -5,14 +5,14 @@
         </th>
         <th>
             <h1>
-                Dan McCarthy
+                www.dmccarthy.org
             </h1>
         </th>
     </tr>
     
 </table>
 
-## 📝 License
+## 🗒️ License
 
 This Website is provided under the GPL-3 license. Feel free to use it as inspiration for your own website.
 
@@ -50,6 +50,10 @@ This Website is provided under the GPL-3 license. Feel free to use it as inspira
 ┌ src
 │ ├ components
 │ │ └ Self Explanatory : |
+│ ├ content
+│ │ └ Blogpost Markdown Files
+│ ├ hooks
+│ │ └ React Hooks
 │ ├ img
 │ │ └ Site image/icons
 │ ├ pages
@@ -57,7 +61,7 @@ This Website is provided under the GPL-3 license. Feel free to use it as inspira
 │ ├ styles
 │ │ └ Sass stylesheets
 │ └ templates
-│   └
+│   └ Static Page Templates
 │
 ├ static
 │ └ CNAME
@@ -73,7 +77,9 @@ This Website is provided under the GPL-3 license. Feel free to use it as inspira
 
 - [Gatsbyjs](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 - [React](https://react.dev/reference/react)
-- [Sass]()
+- [Sass](https://sass-lang.com/documentation/syntax/)
+
+### Credit to <a href="https://github.com/twitter/twemoji">Twemoji</a> for the favicon lol.
 
 ##
 

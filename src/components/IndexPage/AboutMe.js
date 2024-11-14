@@ -1,39 +1,54 @@
-// Packages
 import React from "react";
-
-// Components
-import AboutHeader from "@components/IndexPage/AboutHeader";
-
-// Styles
-import "@styles/components/AboutMe.scss";
+import { Link } from "gatsby";
+import { ReactTyped } from "react-typed";
+import { AnimateText } from "@components/Common/AnimateText";
 
 // Images
-import me from "@img/me.jpg";
+import headshot from "@img/headshot.jpg";
 
 const AboutMe = () => {
   return (
-    <div className="about-background">
-      <h2 className="header">About Me:</h2>
-      <div className="about">
-        <div className="about-text">
-          <AboutHeader />
-          <p>
-            I am a Computer Science Major interested in all things programming
-            and software development. I’m currently working towards a BS in
-            Computer Science at the University of New Hampshire and in my free
-            time I like to work on different projects usually in Python or
-            Javascript.
-          </p>
-        </div>
-        <div className="about-image">
-          <img src={me} />
-        </div>
+    <section className="container alt-bg">
+      {/* id "scroll" is for scroll button */}
+      <AnimateText classes={["h2", "header"]} text="About Me:" />
+      <img
+        className="about-image"
+        src={headshot}
+        alt="Picture of Dan McCarthy"
+      />
+      <div className="about-content">
+        <h3 id="scroll">
+          I'm{" "}
+          <ReactTyped
+            strings={[
+              "a Student",
+              "a Developer",
+              "a Leader",
+              "a Programmer",
+              "a Designer",
+            ]}
+            typeSpeed={50}
+            backSpeed={40}
+            loop
+            className="aqua"
+          />
+        </h3>
+        <p>
+          Hi again! My name is Dan and I'm a Computer Science student interested
+          in all things software development, and cybersecurity. I’m currently
+          working towards a BS in Computer Science at the University of New
+          Hampshire and in my free time I like to work on different projects in
+          a number of different languages which you can find on my github.
+        </p>
       </div>
-      {/* <div className="about-resume">
-        <h3>Checkout My Resume -</h3>
-        <button>My Resume</button>
+
+      {/* <div className="resume-link">
+        <h4>Checkout My Resume -</h4>
+        <Link to="/resume" className="button">
+          My Resume
+        </Link>
       </div> */}
-    </div>
+    </section>
   );
 };
 

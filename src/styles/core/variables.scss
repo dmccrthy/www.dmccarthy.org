@@ -1,0 +1,104 @@
+/*
+* Sass variables used throughout .scss files
+*/
+
+// Typography
+$h1: (size: calc(2.5rem + 1.25vw), max-size: 4rem,line-height: 6rem,     letter-spacing: -.01562em, weight: 700);
+$h2: (size: calc(1.35rem + 0.9vw), max-size: 2rem,  line-height: 3.75rem,  letter-spacing: -.00833em, weight: 600);
+$h3: (size: calc(1.3rem + 0.6vw), max-size: 1.5rem,     line-height: 3.125rem, letter-spacing: normal,    weight: 400);
+$h4: (size: calc(1.2rem + 0.6vw), max-size: 1.25rem, line-height: 2.5rem,   letter-spacing: .00735em,  weight: 400);
+$h5: (size: calc(1.1rem + 0.6vw), max-size: 1.25rem,   line-height: 2rem,     letter-spacing: normal,    weight: 400);
+$h6: (size: calc(1rem + 0.6vw), max-size: 1.25rem,  line-height: 2rem,     letter-spacing: .0125em,   weight: 400);
+$p: (size: calc(1rem + 0.3vw), max-size: 1rem,  line-height: 2rem,     letter-spacing: .0125em,   weight: 400);
+
+$headings: ("h1": $h1, "h2": $h2,"h3": $h3,"h4": $h4,"h5": $h5,"h6": $h6, "p": $p);
+
+// Breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+// Colors Vars
+$red: #cc241d;
+$green: #98971a;
+$yellow: #d79921;
+$blue: #458588;
+// $blue-alt: #076678;
+$purple: #b16286;
+$aqua: #689d6a;
+
+$colors: ("red": $red, "green": $green, "yellow": $yellow, "blue": $blue, "purple": $purple, "aqua": $aqua);
+
+$gradient: linear-gradient(
+  90deg,
+  $red 25%,
+  $green 25%,
+  $green 50%,
+  $yellow 50%,
+  $yellow 75%,
+  $blue 75%
+);
+
+// Light Mode
+$bg-main-light: #f6f6f6;
+$bg-alt-light: #eceff1;
+$bg-accent-light: #303030;
+$text-light: #323235;
+$scheme-light: light;
+// Filter to text color
+$filter-light: invert(17%) sepia(8%) saturate(319%) hue-rotate(202deg) brightness(93%) contrast(90%);
+
+// Dark Mode
+$bg-main-dark: #1d2021;
+$bg-alt-dark: #161819;
+$bg-accent-dark: #303030;
+$text-dark: #ffffff;
+$scheme-dark: dark;
+// Filter to text color
+$filter-dark: invert(98%) sepia(99%) saturate(5%) hue-rotate(6deg) brightness(103%) contrast(100%);
+
+// Themes
+$themes: (
+  light: (
+    bg: $bg-main-light,
+    alt: $bg-alt-light,
+    accent: $bg-accent-light,
+    text: $text-light,
+    scheme: $scheme-light,
+    filter: $filter-light,
+  ),
+  dark: (
+    bg: $bg-main-dark,
+    alt: $bg-alt-dark,
+    accent: $bg-accent-dark,
+    text: $text-dark,
+    scheme: $scheme-dark,
+    filter: $filter-dark,
+  ),
+);
+
+// Theming Functions
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+// Get value from current theme map
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
