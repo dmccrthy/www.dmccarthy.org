@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home | Dan McCarthy</title>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module" src="./main.bundle.js" defer></script>
+
+        <!-- Fetch Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="bg-[--main] mx-auto w-10/12 sm:w-8/12">
+        <page-header></page-header>
+        <main class="mx-10 hidden">
+            <section
+                class="flex flex-col md:flex-row justify-evenly items-center pb-10"
+            >
+                <div class="pb-4 md:pb-0 md:w-1/2">
+                    <h2 class="text-2xl font-medium py-4">About Me:</h2>
+                    <p>
+                        Hi, my name's Dan and I'm an aspiring
+                        <i>Software Developer</i> from
+                        <i>New Hampshire</i> interested in all things , and
+                        cybersecurity. I’m currently working towards a BS in
+                        Computer Science at the University of New Hampshire and
+                    </p>
+                </div>
+                <img
+                    src="./images/headshot.webp"
+                    alt="Picture of Dan McCarthy"
+                    class="size-48 rounded-2xl mx-auto"
+                />
+            </section>
+            <section></section>
+        </main>
+        <page-footer></page-footer>
+    </body>
+</html>
