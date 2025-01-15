@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        /* Define vars for theme */
+        --main: #f6f6f6;
+        --alt: #eceff1;
+        --font: #1d2021;
+
+        color: var(--font);
+        font-family: Roboto, Arial, sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -ms-text-size-adjust: 100%;
+        -moz-osx-font-smoothing: grayscale;
+        font-synthesis: none !important;
+
+        svg {
+            fill: none;
+        }
+
+        svg:hover {
+            fill: var(--font);
+        }
+
+        svg * {
+            stroke: var(--font);
+        }
+    }
+
+    html.dark {
+        /* Define vars for theme */
+        --main: #1d2021;
+        --alt: #161819;
+        --font: #ffffff;
+    }
+
+    .nav-bar {
+        @apply flex gap-4 items-center text-lg py-4 ;
+
+        a {
+            @apply px-4 py-2 font-normal hover:bg-[--alt] hover:rounded-lg;
+        }
+    }
+}

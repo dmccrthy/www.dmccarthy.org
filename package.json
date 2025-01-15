@@ -1,42 +1,26 @@
 {
   "name": "www.dmccarthy.org",
-  "version": "1.0.0",
-  "private": true,
-  "description": "React porfolio site",
-  "author": "Dan McCarthy",
-  "keywords": [
-    "gatsby",
-    "react",
-    "Dan McCarthy"
-  ],
+  "version": "2.0.1",
+  "description": "Source code for my personal site",
+  "main": "main.js",
   "scripts": {
-    "develop": "gatsby develop",
-    "deploy": "gatsby build && gh-pages -d public -b develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "webpack serve",
+    "build": "webpack --env production --config webpack.config.js"
+  },
+  "author": "Dan McCarthy",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
-    "@fontsource/inter": "^5.0.19",
-    "framer-motion": "^11.9.0",
-    "gatsby": "^5.0.0",
-    "gatsby-plugin-fix-fouc": "^1.0.5",
-    "gatsby-plugin-manifest": "^5.13.0",
-    "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sass": "^6.13.1",
-    "gatsby-plugin-sitemap": "^6.12.3",
-    "gatsby-plugin-styled-components": "^6.12.0",
-    "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-transformer-remark": "^6.13.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-intersection-observer": "^9.13.1",
-    "react-typed": "^2.0.12",
-    "sass": "^1.77.4"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.1.0"
+    "autoprefixer": "^10.4.20",
+    "css-loader": "^7.1.2",
+    "postcss": "^8.4.49",
+    "postcss-loader": "^8.1.1",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.17"
   }
 }

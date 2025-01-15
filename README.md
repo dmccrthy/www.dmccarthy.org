@@ -1,7 +1,7 @@
 <table align="center">
     <tr>
         <th>
-            <img src="src/img/favicon.png" height="60">           
+            <img src="./src/public/favicon.svg" height="60">           
         </th>
         <th>
             <h1>
@@ -14,7 +14,7 @@
 
 ## 🗒️ License
 
-This Website is provided under the GPL-3 license. Feel free to use it as inspiration for your own website.
+This Website is provided under the AGPL-3 license. Feel free to use it as inspiration for your own website.
 
 ## 🏁 Getting Started
 
@@ -23,7 +23,7 @@ This Website is provided under the GPL-3 license. Feel free to use it as inspira
     Start by cloning the repository to your device
 
     ```shell
-    git clone https://github.com/dmccrthy/dmccrthy.github.io
+    git clone https://github.com/dmccrthy/www.dmccarthy.org
     ```
 
 2.  **Install Dependencies**
@@ -31,7 +31,7 @@ This Website is provided under the GPL-3 license. Feel free to use it as inspira
     From here you should navigate to the site folder and install the dependencies
 
     ```shell
-    cd dmccrthy.github.io/
+    cd www.dmccarthy.org/
     npm install
     ```
 
@@ -39,7 +39,6 @@ This Website is provided under the GPL-3 license. Feel free to use it as inspira
 
     ```shell
     npm run develop
-    #Alternatively: "gatsby develop"
     ```
 
     From here the site should be running at http://localhost:8000
@@ -50,34 +49,29 @@ This Website is provided under the GPL-3 license. Feel free to use it as inspira
 ┌ src
 │ ├ components
 │ │ └ Self Explanatory : |
-│ ├ content
-│ │ └ Blogpost Markdown Files
-│ ├ hooks
-│ │ └ React Hooks
-│ ├ img
-│ │ └ Site image/icons
-│ ├ pages
-│ │ └ All of the main webpages
-│ ├ styles
-│ │ └ Sass stylesheets
-│ └ templates
-│   └ Static Page Templates
+│ ├ css
+│ │ └ Stylesheets for the website
+│ ├ images
+│ │ └ Pictures used on the website
+│ ├ js
+│ │ └ Javascript lol
+│ ├ public
+│ │ └ Publicly accessible content
+│ │
+│ └ HTML files
 │
-├ static
-│ └ CNAME
-│
-├ gatsby-config.js
-├ gatsby-browser.js
-├ gatsby-node.js
+├ postcss.config.js
+├ tailwind.config.js
+├ webpack.config.js
 ├ package.json
-└ README.md
+├ README.md
+└ LICENSE
 ```
 
 ## 🧰 Tools Used
 
-- [Gatsbyjs](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-- [React](https://react.dev/reference/react)
-- [Sass](https://sass-lang.com/documentation/syntax/)
+- [Webpack](https://webpack.js.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ### Credit to <a href="https://github.com/twitter/twemoji">Twemoji</a> for the favicon lol.
 
